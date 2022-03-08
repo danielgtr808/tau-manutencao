@@ -1,0 +1,11 @@
+<span class="crud-form-label">{{this.label}}</span>
+<div class="form-group" [ngClass]="{ 'error': this.error !== ''}">
+    <input
+        (blur)="this.onTouched()"
+        (focus)="this.onTouched()"
+        (input)="this.onChange($event)"
+        [(ngModel)]="this.value"
+        [type]="this.type"
+    >
+    <span class="error-message">{{this.error}}</span>
+</div>

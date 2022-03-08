@@ -1,0 +1,21 @@
+<app-side-menu></app-side-menu>
+<div class="content">
+    <app-content-top-menu
+        [moduleTitle]="pageTitle"
+    ></app-content-top-menu>
+    <div class="container">
+        <form class="crud-form" [formGroup]="this.formGroup" [noValidate]>
+            <app-error-message></app-error-message>
+            <app-short-answer-field
+                [abstractControl]="this.departmentForm.controls.name"
+                formControlName="name"
+                [label]="'Qual o nome do departamento?'"
+                [type]="'text'"
+            ></app-short-answer-field>
+            <div class="button-row">
+                <button class="secondary-button" [routerLink]="'/manpower/departments'">Cancelar</button>
+                <button class="primary-button" (click)="this.saveChanges()">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>

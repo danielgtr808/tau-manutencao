@@ -1,0 +1,13 @@
+<h1>{{this.moduleTitle}}</h1>
+<div class="sub-page-links">
+    <div
+        class="sub-page-link"
+        *ngFor="let subPageLink of this.subPageLinks"
+        [routerLink]="subPageLink.routerLink"
+        [routerLinkActive]="'active'"
+    >
+        <span class="label">{{subPageLink.label}}</span>
+        <div class="status-indicator"></div>
+    </div>
+</div>
+<div class="divider"></div>

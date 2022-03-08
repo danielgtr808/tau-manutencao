@@ -1,0 +1,15 @@
+<label [ngClass]="{ 'on-focus': this.onFocus, 'error': this.error !== ''}">
+    <span [ngClass]="{ 'on-focus': this.onFocus }" class="floating-label">{{this.label}}</span>
+    <input
+        (blur)="this.onFocus = false; this.onTouched()"
+        (focus)="this.onFocus = true; this.onTouched()"
+        (input)="this.onChange($event)"
+        [readonly]="this.readOnly"
+        [type]="this.type"
+        [(ngModel)]="value"
+    >
+    <span class="error-message">{{this.error}}</span>
+</label>
+
+
+    

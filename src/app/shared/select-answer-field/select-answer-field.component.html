@@ -1,0 +1,21 @@
+<span class="crud-form-label">{{this.label}}</span>
+<div
+    class="form-group"
+    [ngClass]="{ 'error': this.error !== ''}"
+    *ngIf="this.selectAnswerConfiguration"
+>
+    <select
+        (blur)="this.onTouched()"
+        (focus)="this.onTouched()"
+        (change)="this.onChange($event)"
+        [(ngModel)]="this.value"
+    >
+        <option
+            *ngFor="let data of this.selectAnswerConfiguration.data"
+            [attr.value]="data[this.selectAnswerConfiguration.idProperty]"
+        >
+            {{data[this.selectAnswerConfiguration.valueProperty]}}
+        </option>
+    </select>
+    <span class="error-message">{{this.error}}</span>
+</div>

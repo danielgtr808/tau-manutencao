@@ -1,0 +1,38 @@
+<div class="data">
+    <span class="value">{{this.value}}</span>
+    <span class="label">{{this.iconAndLabel}}</span>
+</div>
+<div class="icon-wrapper">
+    <svg *ngIf="this.iconAndLabel === 'SS pendentes'" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.75 10.5H26.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9.75 25.5H26.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 30V27C9 24.6131 9.94821 22.3239 11.636 20.636C13.3239 18.9482 15.6131 18 18 18C20.3869 18 22.6761 18.9482 24.364 20.636C26.0518 22.3239 27 24.6131 27 27V30C27 30.3978 26.842 30.7794 26.5607 31.0607C26.2794 31.342 25.8978 31.5 25.5 31.5H10.5C10.1022 31.5 9.72064 31.342 9.43934 31.0607C9.15804 30.7794 9 30.3978 9 30Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 6V9C9 11.3869 9.94821 13.6761 11.636 15.364C13.3239 17.0518 15.6131 18 18 18C20.3869 18 22.6761 17.0518 24.364 15.364C26.0518 13.6761 27 11.3869 27 9V6C27 5.60218 26.842 5.22064 26.5607 4.93934C26.2794 4.65804 25.8978 4.5 25.5 4.5H10.5C10.1022 4.5 9.72064 4.65804 9.43934 4.93934C9.15804 5.22064 9 5.60218 9 6V6Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <svg *ngIf="this.iconAndLabel === 'OS corretivas'" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M28.5 10.5H7.5C6.67157 10.5 6 11.1716 6 12V22.5C6 23.3284 6.67157 24 7.5 24H28.5C29.3284 24 30 23.3284 30 22.5V12C30 11.1716 29.3284 10.5 28.5 10.5Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10.5 24V30" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.25 24L24.75 10.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M20.25 24L30 14.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6 20.25L15.75 10.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M25.5 24V30" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7.5 30H13.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22.5 30H28.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M25.5 10.5V7.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10.5 10.5V7.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <svg *ngIf="this.iconAndLabel === 'OS preditivas'" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 18H6C5.17157 18 4.5 18.6716 4.5 19.5V28.5C4.5 29.3284 5.17157 30 6 30H12C12.8284 30 13.5 29.3284 13.5 28.5V19.5C13.5 18.6716 12.8284 18 12 18Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21 12H15C14.1716 12 13.5 12.6716 13.5 13.5V28.5C13.5 29.3284 14.1716 30 15 30H21C21.8284 30 22.5 29.3284 22.5 28.5V13.5C22.5 12.6716 21.8284 12 21 12Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M30 6H24C23.1716 6 22.5 6.67157 22.5 7.5V28.5C22.5 29.3284 23.1716 30 24 30H30C30.8284 30 31.5 29.3284 31.5 28.5V7.5C31.5 6.67157 30.8284 6 30 6Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6 30H27" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <svg *ngIf="this.iconAndLabel === 'OS preventivas'" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.6925 31.5H7.5C6.70435 31.5 5.94129 31.1839 5.37868 30.6213C4.81607 30.0587 4.5 29.2956 4.5 28.5V10.5C4.5 9.70435 4.81607 8.94129 5.37868 8.37868C5.94129 7.81607 6.70435 7.5 7.5 7.5H25.5C26.2956 7.5 27.0587 7.81607 27.6213 8.37868C28.1839 8.94129 28.5 9.70435 28.5 10.5V16.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M27 33C30.3137 33 33 30.3137 33 27C33 23.6863 30.3137 21 27 21C23.6863 21 21 23.6863 21 27C21 30.3137 23.6863 33 27 33Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22.5 4.5V10.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10.5 4.5V10.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4.5 16.5H28.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M27 24.744V27L28.5 28.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>        
+</div>

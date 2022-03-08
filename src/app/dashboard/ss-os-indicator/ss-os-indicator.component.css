@@ -1,0 +1,75 @@
+:host {
+    align-items: center;
+    background-color: var(--color-background-10);
+    border-radius: 8px;
+    box-shadow: 0px 7px 29px rgba(100, 100, 111, 0.2);
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 253px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.data > .label {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: -0.05em;
+    line-height: 19px;
+}
+
+.data > .value {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.icon-wrapper {
+    align-items: center;
+    background-color: var(--color-background-90);
+    border-radius: 50%;
+    display: flex;
+    height: 72px;
+    justify-content: center;
+    width: 72px;
+}
+
+.icon-wrapper > svg {
+    stroke: var(--color-indicator-icon);
+}
+
+@media (min-width: 1440px) {
+    :host {
+        flex: 1;
+    }
+}
+
+@media (max-width: 1154px) {
+    :host {
+        flex: none;
+        /*
+            1154px é o momento em que ficam dois indicadores por linha.
+            32px é o gap entre dois indicadores.
+        */
+        width: calc(50% - 16px);
+    }
+}
+
+@media (max-width: 870px) {
+    :host {
+        flex: none;
+        /*
+            870px é o momento em que os indicadores atingem seu tamanho mínimo
+            projetado (253px)
+        */
+        width: 100%
+    }
+}

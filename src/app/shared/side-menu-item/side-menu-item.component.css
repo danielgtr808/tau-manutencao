@@ -1,0 +1,78 @@
+.host {    
+    align-items: stretch;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+
+.selected-indicator {
+    background-color: var(--color-primary-10);
+    border-radius: 0px 4px 4px 0px;
+    opacity: 0;
+    width: 4px;
+}
+
+.label-wrapper {
+    align-items: center;
+    color: black;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: 12px;
+    opacity: 0.6;
+    padding: 16px 24px;
+}
+
+.label-icon {
+    height: 24px;
+    width: 24px;
+}
+
+.label-icon > [data-stroke] {
+    stroke: black;
+}
+
+.label-icon > [data-fill] > path {
+    fill: black;
+}
+
+.label {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.host:hover > .selected-indicator {
+    transition: 150ms;
+    opacity: 1;
+}
+
+.host:hover > .label-wrapper {
+    color: var(--color-primary-10);
+    opacity: 0.8;
+}
+
+.host:hover > .label-wrapper > .label-icon > [data-stroke] {
+    stroke: var(--color-primary-10);
+}
+
+.host:hover > .label-wrapper > .label-icon > [data-fill] > path {
+    fill: var(--color-primary-10);
+}
+
+.active > .selected-indicator {
+    opacity: 1;
+}
+
+.active > .label-wrapper {
+    color: var(--color-primary-10);
+    opacity: 0.8;
+}
+
+.active > .label-wrapper > .label-icon > [data-stroke] {
+    stroke: var(--color-primary-10);
+}
+
+.active > .label-wrapper > .label-icon > [data-fill] > path {
+    fill: var(--color-primary-10);
+}

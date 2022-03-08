@@ -1,0 +1,27 @@
+<app-side-menu></app-side-menu>
+<div class="content">
+    <app-content-top-menu
+        [moduleTitle]="pageTitle"
+    ></app-content-top-menu>
+    <div class="container">
+        <form class="crud-form" [formGroup]="this.formGroup" [noValidate]>
+            <app-error-message></app-error-message>
+            <app-short-answer-field
+                [abstractControl]="this.sectorForm.controls.name"
+                formControlName="name"
+                [label]="'Qual o nome do setor?'"
+                [type]="'text'"
+            ></app-short-answer-field>
+            <app-select-answer-field
+                [abstractControl]="this.sectorForm.controls.departmentId"
+                formControlName="departmentId"
+                [label]="'A qual departamento esse setor pertence?'"
+                [selectAnswerConfiguration]="departmentSelectAnswerConfiguration"
+            ></app-select-answer-field>
+            <div class="button-row">
+                <button class="secondary-button" [routerLink]="'/manpower/sectors'">Cancelar</button>
+                <button class="primary-button" (click)="this.saveChanges()">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>

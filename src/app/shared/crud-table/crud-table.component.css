@@ -1,0 +1,17 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.table-functions {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.table-functions > app-bordered-input {
+    max-width: 376px;
+    width: 100%;
+}

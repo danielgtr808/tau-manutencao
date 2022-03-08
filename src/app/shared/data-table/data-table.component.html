@@ -1,0 +1,16 @@
+<table class="responsive-table" *ngIf="this.dataTableConfiguration" [ngStyle]="{ 'grid-template-columns': this.gridColumns }">
+    <thead>
+        <tr>
+            <th *ngFor="let columnConfig of this.dataTableConfiguration.columnOrder">
+                {{columnConfig.displayName}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of this.data">
+            <td [attr.data-header]="columnConfig.displayName" *ngFor="let columnConfig of this.dataTableConfiguration.columnOrder">
+                {{data[columnConfig.baseProperty]}}
+            </td>
+        </tr>
+    </tbody>
+</table>

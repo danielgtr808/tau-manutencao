@@ -1,1 +1,249 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url("./reset.css");
+@import url("./grid.css");
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    src: url('./assets/fonts/Roboto-Regular.ttf')
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 500;
+    src: url('./assets/fonts/Roboto-Medium.ttf')
+}
+
+:root {
+    --color-background-10: #FFFFFF;
+    --color-background-90: #F5F7FB;
+    --color-input-error: #D50000;
+    --color-indicator-icon: #838690;
+    --color-primary-10: #4158B6;
+    --color-primary-50: #27408B;
+    --color-primary-90: #0D3A66;
+    --color-support-error-background: #F8D7DA;
+    --color-support-error-text: #721C24;
+    --color-table-border: #E0E2E1;
+    --color-table-header-mobile: #6D7283;
+}
+
+html {
+    background-color: var(--color-background-90);
+    font-family: 'Roboto';
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.cta-button {
+    align-items: center;
+    background-color: var(--color-primary-10);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    display: flex;
+    font-size: 16px;
+    font-weight: 500;
+    gap: 12px;
+    justify-content: center;
+    line-height: 100%;
+    outline: none;
+    padding: 16px 0;
+    width: 100%;
+}
+
+.cta-button:hover {
+    background-color: var(--color-primary-50);
+}
+
+.loading-icon {
+    animation: loading-icon 2s linear infinite;
+}
+
+@keyframes loading-icon {
+    from {
+        transform: rotateZ(0deg)
+    }
+    to {
+        transform: rotateZ(360deg)
+
+    }
+}
+
+.typography-anchor, a {
+    color: var(--color-primary-10);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-primary-50)
+}
+
+h1 {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px;
+}
+
+table {
+    display: grid;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    width: 100%;
+}
+
+thead {
+    display: contents;
+}
+
+tbody {
+    display: contents;
+}
+
+tr {
+    display: contents;
+}
+
+th {
+    color: rgba(0, 0, 0, 0.8);
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    border-top: 1px solid var(--color-table-border);
+    color: rgba(0, 0, 0, 0.6);
+    padding: 28px 12px 28px 12px;
+}
+
+.redirect-cell > svg {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.redirect-cell > svg:hover {
+    opacity: 1;
+}
+
+.crud-form {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 100%;
+    justify-content: center;
+    overflow: auto;
+    padding: 16px 24px 32px 24px;
+    width: 100%;
+}
+
+.crud-form > * {
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 537px;
+    width: 100%;
+}
+
+.crud-form-label {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+.button-row {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.button-row > * {
+    cursor: pointer;
+}
+
+.primary-button {
+    align-items: center;
+    background-color: var(--color-primary-10);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    font-weight: 400;
+    gap: 12px;
+    line-height: 19px;
+    padding: 12px 24px 12px 24px;
+}
+
+.primary-button:hover, .primary-button:focus {
+    background-color: var(--color-primary-50);
+}
+
+.secondary-button {
+    background-color: transparent;
+    border: none;
+    color: var(--color-primary-10);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    padding: 12px 24px 12px 24px; 
+}
+
+.secondary-button:hover, .secondary-button:focus {
+    color: var(--color-primary-50);
+}
+
+@media (max-width: 870px) {
+    table {
+        grid-template-columns: 1fr !important;
+    }
+
+    thead {
+        display: none;
+    }
+
+
+    tr {
+        border-top: 1px solid var(--color-table-border);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 24px 0px;
+    }
+
+    tr:first-child {
+        border: none;
+    }
+
+    td {
+        border: none;
+        color: black;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 16px;
+        padding: 0px;
+    }
+
+    td::before {
+        content: attr(data-header) ":";
+        color: var(--color-table-header-mobile);
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 16px;
+    }
+}
