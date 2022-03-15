@@ -1,0 +1,18 @@
+<app-default-form-page
+    [cancelUrl]="'/manpower/employees'"
+    [createCallback]="this.createCallback"
+    [createPageTitle]="'Novo colaborador'"
+    [formGroup]="this.formGroup"
+    [updatePageTitle]="''"
+    [readFromIdCallback]="this.readFromIdCallback"
+    [saveUrl]="'/manpower/employees'"
+    [updateCallback]=""
+>
+    <app-short-answer-field
+        [abstractControl]="this.employeeForm.controls.name"
+        formControlName="name"
+        [helperText]="'O nome do funcionário não pode ser alterado após a criação do registro.'"
+        [label]="'Qual o nome do funcionário?'"
+        [type]="'text'"
+    ></app-short-answer-field>
+</app-default-form-page>

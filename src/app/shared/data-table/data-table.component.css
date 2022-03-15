@@ -1,0 +1,38 @@
+.table-functions {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.checked-data-number {
+    color: #A61D24;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+}
+
+.table-functions > app-bordered-input {
+    max-width: 376px;
+    width: 100%;
+}
+
+tr {
+    display: contents;
+}
+
+.no-data-found {
+    border-top: 1px solid var(--color-table-border);
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.6);
+    display: block;
+    padding: 28px 12px 28px 12px;
+    text-align: center;
+}
+
+@media (max-width: 870px) {
+    .no-data-found {
+        border: none;
+    }
+}

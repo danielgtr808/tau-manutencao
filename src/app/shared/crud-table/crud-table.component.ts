@@ -1,74 +1,32 @@
 import { Component, Input, OnInit } from '@angular/core';
-import CrudTableConfiguration from './crud-table-configuration.model';
-import fullTextSearch from '../helpers/full-text-search.function';
-import SimpleObject from '../helpers/simple-object.type';
 import DataTableConfiguration from '../data-table/data-table-configuration.model';
-
+/**
+ * Usado como uma configuração padrão do componente {@link DataTableComponent}. É aplicado nas
+ * páginas com o sufixo "-data".
+ */
 @Component({
     selector: 'app-crud-table',
     templateUrl: './crud-table.component.html',
-    styleUrls: ['./crud-table.component.css']
+    styleUrls: []
 })
 export class CrudTableComponent implements OnInit {
-
-    @Input() crudTableConfiguration!: CrudTableConfiguration<any>;
-
-    public canLoadMore: boolean = false;
-    public data: SimpleObject[] = [];
-    public filteredData: SimpleObject[] | undefined;
-
-    private lastRegister: any;
-    private lastSearchTerm: string = "";
-
-    constructor() { }
-
-    get gridColumns(): string {
-        let style: string = "";
-
-        for(let columnConfiguration of this.crudTableConfiguration.columnOrder) {
-            style += `${columnConfiguration.size} `
-        }
-
-        return `${style}auto`
-    }
-
+    /**
+     * Caso a tabela esteja exibindo dados ao qual o usuário pode, através de um formulário,
+     * criar um novo registro, o endereço para este formulário é fornecido neste parâmetro.
+     */
+    @Input() newRegisterLink: string = "";
+    /**
+     * Explicação sobre a configuração da tabela de dados é dada no componente {@link DataTableComponent}
+     */
+    @Input() dataTableConfiguration: DataTableConfiguration<any> | undefined;
+    /**
+     * Valida se os parâmetros de entrada necessários foram fornecidos. Caso não, busca
+     * emitir uma mensagem de erro de fácil compreensão para que o manutentor saiba onde
+     * está o problema.
+     */
     ngOnInit(): void {
-        if(!this.crudTableConfiguration) {
-            console.error('É necessário fornecer o parâmetro de entrada "crudTableConfiguration".')
-        }
-        else {
-            this.data = this.crudTableConfiguration.fetchData(
-                this.crudTableConfiguration.registersPerPage
-            );
-        }
-    }
-
-    filterData(searchTerm: string): void {
-        if(searchTerm === "") {
-            this.filteredData = undefined;
-            return;
-        }
-
-        this.lastSearchTerm = searchTerm;
-        this.filteredData = fullTextSearch(this.lastSearchTerm, this.data);
-    }
-
-    loadMore(): void {
-        const newData = this.crudTableConfiguration.fetchData(
-            this.crudTableConfiguration.registersPerPage,
-            this.lastRegister
-        );
-
-        this.canLoadMore = (newData.length === this.crudTableConfiguration.registersPerPage)
-        if(newData.length === 0) {
-            return;
-        }
-
-        this.lastRegister = newData[newData.length - 1];
-        this.data.push(...newData);
-
-        if(this.filteredData) {
-            this.filterData(this.lastSearchTerm);
+        if(!this.dataTableConfiguration) {
+            console.error('É necessário fornecer o parâmetro de entrada "DataTableConfiguration".')
         }
     }
 

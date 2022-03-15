@@ -1,0 +1,25 @@
+<app-default-form-page
+    [cancelUrl]="'/manpower/sectors'"
+    [createCallback]="this.createCallback"
+    [createPageTitle]="'Novo setor'"
+    [formGroup]="this.formGroup"
+    [updatePageTitle]="'Editar setor'"
+    [readFromIdCallback]="this.readFromIdCallback"
+    [saveUrl]="'/manpower/sectors'"
+    [updateCallback]="this.updateCallback"
+>
+    <app-short-answer-field
+        [abstractControl]="this.sectorForm.controls.name"
+        formControlName="name"
+        [helperText]="'O nome do setor não pode ser alterado após a criação do registro.'"
+        [label]="'Qual o nome do setor?'"
+        [readOnly]="this.isUpdate"
+        [type]="'text'"
+    ></app-short-answer-field>
+    <app-select-answer-field
+        [abstractControl]="this.sectorForm.controls.departmentName"
+        formControlName="departmentName"
+        [label]="'A qual departamento esse setor pertence?'"
+        [selectAnswerConfiguration]="departmentSelectAnswerConfiguration"
+    ></app-select-answer-field>
+</app-default-form-page>

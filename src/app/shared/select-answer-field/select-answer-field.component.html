@@ -1,4 +1,8 @@
-<span class="crud-form-label">{{this.label}}</span>
+<span class="crud-form-label">
+    {{this.label}}
+    <br>
+    <span class="helper-text">{{this.helperText}}</span>
+</span>
 <div
     class="form-group"
     [ngClass]="{ 'error': this.error !== ''}"
@@ -8,14 +12,18 @@
         (blur)="this.onTouched()"
         (focus)="this.onTouched()"
         (change)="this.onChange($event)"
+        *ngIf="!this.readOnly"
         [(ngModel)]="this.value"
     >
+        <option style="display: none;" value=""></option>
         <option
             *ngFor="let data of this.selectAnswerConfiguration.data"
             [attr.value]="data[this.selectAnswerConfiguration.idProperty]"
+            [ngStyle]="{ 'display': data[this.selectAnswerConfiguration.determineDisplayProperty] === false ? 'none' : 'block' }"
         >
             {{data[this.selectAnswerConfiguration.valueProperty]}}
         </option>
     </select>
+    <span class="read-only-field" *ngIf="this.readOnly">{{this.displayValue}}</span>
     <span class="error-message">{{this.error}}</span>
 </div>

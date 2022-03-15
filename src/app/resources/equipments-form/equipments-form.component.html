@@ -1,0 +1,25 @@
+<app-default-form-page
+    [cancelUrl]="'/resources/equipments'"
+    [createCallback]="this.createCallback"
+    [createPageTitle]="'Novo equipamento'"
+    [formGroup]="this.formGroup"
+    [updatePageTitle]="'Editar equipamento'"
+    [readFromIdCallback]="this.readFromIdCallback"
+    [saveUrl]="'/resources/equipments'"
+    [updateCallback]="this.updateCallback"
+>
+    <app-short-answer-field
+        [abstractControl]="this.equipmentForm.controls.name"
+        formControlName="name"
+        [helperText]="'O nome do equipamento não pode ser alterado após a criação do registro.'"
+        [label]="'Qual o nome do equipamento?'"
+        [readOnly]="this.isUpdate"
+        [type]="'text'"
+    ></app-short-answer-field>
+    <app-select-answer-field
+        [abstractControl]="this.equipmentForm.controls.machineName"
+        formControlName="machineName"
+        [label]="'A qual máquina pertence esse equipamento?'"
+        [selectAnswerConfiguration]="machineSelectAnswerConfiguration"
+    ></app-select-answer-field>
+</app-default-form-page>

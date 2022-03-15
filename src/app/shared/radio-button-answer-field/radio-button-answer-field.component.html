@@ -1,0 +1,14 @@
+<span class="crud-form-label">{{this.label}}</span>
+<div class="form-group" [ngClass]="{ 'error': this.error !== ''}">
+    <label
+        [attr.data-checked]="this.value === option.value"
+        (click)="this.onChange(option.value)"
+        *ngFor="let option of this.radioButtonOptions"
+    >
+        <div class="check-box">
+            <div class="dot"></div>
+        </div>
+        {{option.label}}
+    </label>
+    <span class="error-message">{{this.error}}</span>
+</div>

@@ -1,0 +1,25 @@
+<app-default-form-page
+    [cancelUrl]="'/resources/machine-families'"
+    [createCallback]="this.createCallback"
+    [createPageTitle]="'Nova família de máquinas'"
+    [formGroup]="this.formGroup"
+    [updatePageTitle]="''"
+    [readFromIdCallback]="this.readFromIdCallback"
+    [saveUrl]="'/resources/machine-families'"
+    [updateCallback]=""
+>
+    <app-short-answer-field
+        [abstractControl]="this.machineFamilyForm.controls.name"
+        formControlName="name"
+        [helperText]="'O nome da família de máquinas não pode ser alterado após a criação do registro.'"
+        [label]="'Qual o nome da família de máquinas?'"
+        [type]="'text'"
+    ></app-short-answer-field>
+    <app-short-answer-field
+        [abstractControl]="this.machineFamilyForm.controls.prefix"
+        formControlName="prefix"
+        [helperText]="'O prefixo da família de máquinas não pode ser alterado após a criação do registro.'"
+        [label]="'Dê um prefixo para essa família'"
+        [type]="'text'"
+    ></app-short-answer-field>
+</app-default-form-page>

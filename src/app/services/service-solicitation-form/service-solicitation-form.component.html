@@ -1,0 +1,71 @@
+<app-default-form-page
+    [cancelUrl]="'/services/service-solicitations'"
+    [createCallback]="this.createCallback"
+    [createPageTitle]="'Nova solicitação de serviço'"
+    [formGroup]="this.formGroup"
+    [updatePageTitle]="'Editar solicitação de serviço'"
+    [readFromIdCallback]="this.readFromIdCallback"
+    [saveUrl]="'/services/service-solicitations'"
+    [updateCallback]="this.updateCallback"
+>
+    <app-select-answer-field
+        [abstractControl]="this.serviceSolicitationForm.controls.machineName"
+        (change)="this.onMachineNameChange($event.target!)"
+        (firstChange)="this.onMachineNameChange($event.target!)"
+        formControlName="machineName"
+        [label]="'Em qual máquina ocorreu o problema?'"
+        [selectAnswerConfiguration]="machineSelectAnswerConfiguration"
+    ></app-select-answer-field>
+    <app-select-answer-field
+        [abstractControl]="this.serviceSolicitationForm.controls.machineTag"
+        (change)="this.onMachineTagChange($event.target!)"
+        (firstChange)="this.onMachineTagChange($event.target!)"
+        formControlName="machineTag"
+        [label]="'Qual é a tag da máquina?'"
+        *ngIf="this.showMachineTagField"
+        [selectAnswerConfiguration]="tagSelectAnswerConfiguration"
+    ></app-select-answer-field>
+    <app-select-answer-field
+        [abstractControl]="this.serviceSolicitationForm.controls.sectorName"
+        (change)="this.onSectorNameChange($event.target!)"
+        (firstChange)="this.onSectorNameChange($event.target!)"
+        formControlName="sectorName"
+        [label]="'Em qual setor ocorreu o problema?'"
+        *ngIf="this.showSectorNameField"
+        [selectAnswerConfiguration]="sectorSelectAnswerConfiguration"
+    ></app-select-answer-field>
+    <app-select-answer-field
+        [abstractControl]="this.serviceSolicitationForm.controls.symptom"
+        formControlName="symptom"
+        [label]="'Qual o sintoma apresentado pela máquina?'"
+        *ngIf="this.showSymptomField"
+        [selectAnswerConfiguration]="symptomSelectAnswerConfiguration"
+    ></app-select-answer-field>    
+    <app-radio-button-answer-field
+        [abstractControl]="this.serviceSolicitationForm.controls.serviceOrderType"
+        formControlName="serviceOrderType"
+        [label]="'Qual o tipo de ordem de serviço?'"
+        *ngIf="this.showOsTypeField"
+        [radioButtonOptions]="this.serviceOrderTypeRadioButton"
+    ></app-radio-button-answer-field>    
+    <app-long-answer-field
+        [abstractControl]="this.serviceSolicitationForm.controls.description"
+        formControlName="description"
+        [label]="'Descreva o problema (opcional)'"
+        *ngIf="this.showDescriptionField"
+    ></app-long-answer-field>
+    <app-radio-button-answer-field
+        [abstractControl]="this.serviceSolicitationForm.controls.status"
+        formControlName="status"
+        [label]="'Qual o estado da solicitação de serviço?'"
+        *ngIf="this.isUpdate"
+        (onChangeEvent)="this.onStatusChange($event)"
+        [radioButtonOptions]="this.statusRadioButton"
+    ></app-radio-button-answer-field>
+    <app-long-answer-field
+        [abstractControl]="this.serviceSolicitationForm.controls.reprovationReason"
+        formControlName="reprovationReason"
+        [label]="'Qual o motivo da reprovação?'"
+        *ngIf="this.isUpdate && this.showReprovationReasonField"
+    ></app-long-answer-field>
+</app-default-form-page>

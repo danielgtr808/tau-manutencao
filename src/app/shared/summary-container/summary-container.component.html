@@ -1,0 +1,8 @@
+<app-content-container [title]="this.title">
+    <div class="fields">
+        <div *ngFor="let data of this.summaryData">
+            <span class="label">{{data.label}}</span>
+            <span class="value">{{data.value}}</span>
+        </div>
+    </div>
+</app-content-container>

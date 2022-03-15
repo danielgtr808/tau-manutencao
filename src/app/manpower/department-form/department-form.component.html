@@ -1,0 +1,18 @@
+<app-default-form-page
+    [cancelUrl]="'/manpower/departments'"
+    [createCallback]="this.createCallback"
+    [createPageTitle]="'Novo departamento'"
+    [formGroup]="this.formGroup"
+    [updatePageTitle]="''"
+    [readFromIdCallback]="this.readFromIdCallback"
+    [saveUrl]="'/manpower/departments'"
+    [updateCallback]=""
+>
+    <app-short-answer-field
+        [abstractControl]="this.departmentForm.controls.name"
+        formControlName="name"
+        [helperText]="'O nome do departamento não pode ser alterado após a criação do registro.'"
+        [label]="'Qual o nome do departamento?'"
+        [type]="'text'"
+    ></app-short-answer-field>
+</app-default-form-page>

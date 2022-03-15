@@ -1,4 +1,4 @@
-import { Component, forwardRef, Input } from '@angular/core';
+import { Component, EventEmitter, forwardRef, Input, Output } from '@angular/core';
 import { AbstractControl, ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import SelectAnswerConfiguration from './select-answer-configuration.type';
 
@@ -18,11 +18,15 @@ export class SelectAnswerFieldComponent implements ControlValueAccessor {
 
     @Input() abstractControl: AbstractControl | undefined;
     @Input() formControlName: string | undefined;
+    @Input() helperText: string = "";
     @Input() label: string = "";
+    @Input() readOnly: boolean = false;
     @Input() selectAnswerConfiguration: SelectAnswerConfiguration<any> | undefined
 
     onFocus: boolean = false;
     value: string = "";
+
+    @Output() firstChange = new EventEmitter();
 
     private _onChangeFn: any | undefined;
     private _onTouchedFn: any | undefined;
@@ -42,11 +46,25 @@ export class SelectAnswerFieldComponent implements ControlValueAccessor {
         return errorMessage;
     }
 
+    get displayValue(): any {
+        if(!this.selectAnswerConfiguration) {
+            return "";
+        }
+
+        for(let obj of this.selectAnswerConfiguration.data) {
+            if(obj[this.selectAnswerConfiguration.idProperty] === this.value) {
+                return obj[this.selectAnswerConfiguration.valueProperty];
+            }
+        }
+
+        return "";
+    }
+
     onChange(event: Event): void {
+        const selectValue = (event.target as HTMLSelectElement).value
+
         if(!this._onChangeFn) return;
-        this._onChangeFn(
-            (event.target as HTMLInputElement).value
-        );
+        this._onChangeFn(selectValue);
     }
 
     onTouched(): void {
@@ -64,5 +82,10 @@ export class SelectAnswerFieldComponent implements ControlValueAccessor {
 
     writeValue(obj: any): void {
         this.value = obj;
+        this.firstChange.emit({
+            target: {
+                value: this.value
+            }
+        } as unknown as Event);
     }
 }

@@ -1,15 +1,15 @@
 import { CommonModule } from '@angular/common';
-import { EmployeeDataComponent } from './employee-data/employee-data.component';
-import { EmployeesPageComponent } from './employees-page/employees-page.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import SubPageLink from '../shared/content-top-menu/sub-page-link.model';
 import { ReactiveFormsModule } from '@angular/forms';
-import { DepartmentPageComponent } from './department-page/department-page.component';
 import { DepartmentDataComponent } from './department-data/department-data.component';
-import { SectorPageComponent } from './sector-page/sector-page.component';
 import { SectorDataComponent } from './sector-data/sector-data.component';
+import { EmployeesFormComponent } from './employees-form/employees-form.component';
+import { EmployeesDataComponent } from './employees-data/employees-data.component';
+import { DepartmentFormComponent } from './department-form/department-form.component';
+import { SectorFormComponent } from './sector-form/sector-form.component';
 
 const manpowerRoutes: Routes = [
     {
@@ -18,27 +18,27 @@ const manpowerRoutes: Routes = [
         redirectTo: 'employees'        
     },
     {
-        component: EmployeesPageComponent,
+        component: EmployeesDataComponent,
         path: 'employees'
     },
     {
-        component: EmployeeDataComponent,
+        component: EmployeesFormComponent,
         path: 'employees/:id'
     },
     {
-        component: DepartmentPageComponent,
+        component: DepartmentDataComponent,
         path: 'departments'
     },
     {
-        component: DepartmentDataComponent,
+        component: DepartmentFormComponent,
         path: 'departments/:id'
     },
     {
-        component: SectorPageComponent,
+        component: SectorDataComponent,
         path: 'sectors'
     },
     {
-        component: SectorDataComponent,
+        component: SectorFormComponent,
         path: 'sectors/:id'
     }
 ];
@@ -60,12 +60,12 @@ export const subPageLinks: SubPageLink[] = [
 
 @NgModule({
     declarations: [
-        EmployeeDataComponent,
-        EmployeesPageComponent,
-        DepartmentPageComponent,
+        EmployeesDataComponent,
+        EmployeesFormComponent,
         DepartmentDataComponent,
-        SectorPageComponent,
-        SectorDataComponent
+        DepartmentFormComponent,
+        SectorDataComponent,
+        SectorFormComponent
     ],
     imports: [
         CommonModule,

@@ -1,0 +1,16 @@
+<app-default-form-page
+    [cancelUrl]="'/interventions/solutions'"
+    [createCallback]="this.createCallback"
+    [createPageTitle]="'Nova solução'"
+    [formGroup]="this.formGroup"
+    [updatePageTitle]="'Editar solução'"
+    [readFromIdCallback]="this.readFromIdCallback"
+    [saveUrl]="'/interventions/solutions'"
+    [updateCallback]="this.updateCallback"
+>
+    <app-long-answer-field
+        [abstractControl]="this.solutionForm.controls.description"
+        formControlName="description"
+        [label]="'Descreva a solução'"
+    ></app-long-answer-field>
+</app-default-form-page>

@@ -1,13 +1,17 @@
+<div class="collapse-button" (click)="this.collapseButtonClick()">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.5007 3.3335L5.83398 10.0002L12.5007 16.6668" stroke="black" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>        
+</div>
 <div class="logo-wrapper">
     <app-logo [routerLink]="'/dashboard'" [size]="'small'"></app-logo>
 </div>
 <div class="side-menu-itens">
-    <app-side-menu-item [routerLink]="'/dashboard'"></app-side-menu-item>
-    <app-side-menu-item [routerLink]="'/manpower'" [type]="'Mão de obra'"></app-side-menu-item>
-    <app-side-menu-item [routerLink]="'/resources'" [type]="'Recursos'"></app-side-menu-item>
-    <app-side-menu-item [routerLink]="'/interventions'" [type]="'Intervenções'"></app-side-menu-item>
-    <app-side-menu-item [routerLink]="'/services'" [type]="'Serviços'"></app-side-menu-item>
-    <app-side-menu-item [routerLink]="'/reports'" [type]="'Relatórios'"></app-side-menu-item>
+    <app-side-menu-item (click)="this.sideMenuClick()" [routerLink]="'/dashboard'"></app-side-menu-item>
+    <app-side-menu-item (click)="this.sideMenuClick()" [routerLink]="'/manpower'" [type]="'Mão de obra'"></app-side-menu-item>
+    <app-side-menu-item (click)="this.sideMenuClick()" [routerLink]="'/resources'" [type]="'Recursos'"></app-side-menu-item>
+    <app-side-menu-item (click)="this.sideMenuClick()" [routerLink]="'/interventions'" [type]="'Intervenções'"></app-side-menu-item>
+    <app-side-menu-item (click)="this.sideMenuClick()" [routerLink]="'/services'" [type]="'Serviços'"></app-side-menu-item>
 </div>
 <div class="user-wrapper">
     <div class="user">

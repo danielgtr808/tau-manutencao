@@ -1,0 +1,16 @@
+<app-default-page
+    [moduleTitle]="this.moduleTitle"
+    [subPageLinks]="this.subPageLinks"
+>
+    <div class="row" insideContainer>
+        <div class="col-12">
+            <app-content-container>
+                <app-crud-table
+                    [dataTableConfiguration]="this.dataTableConfiguration"
+                    [newRegisterLink]="this.newRegisterLink"
+                    *ngIf="this.dataTableConfiguration"
+                ></app-crud-table>
+            </app-content-container>
+        </div>
+    </div>
+</app-default-page>

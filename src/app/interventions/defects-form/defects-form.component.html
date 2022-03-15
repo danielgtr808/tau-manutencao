@@ -1,0 +1,16 @@
+<app-default-form-page
+    [cancelUrl]="'/interventions/defects'"
+    [createCallback]="this.createCallback"
+    [createPageTitle]="'Novo defeito'"
+    [formGroup]="this.formGroup"
+    [updatePageTitle]="'Editar defeito'"
+    [readFromIdCallback]="this.readFromIdCallback"
+    [saveUrl]="'/interventions/defects'"
+    [updateCallback]="this.updateCallback"
+>
+    <app-long-answer-field
+        [abstractControl]="this.defectForm.controls.description"
+        formControlName="description"
+        [label]="'Descreva o defeito'"
+    ></app-long-answer-field>
+</app-default-form-page>

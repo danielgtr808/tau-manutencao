@@ -1,0 +1,17 @@
+<app-default-form-page
+    [cancelUrl]="'/resources/tags'"
+    [createCallback]="this.createCallback"
+    [createPageTitle]="'Nova tag'"
+    [formGroup]="this.formGroup"
+    [updatePageTitle]="'Editar tag'"
+    [readFromIdCallback]="this.readFromIdCallback"
+    [saveUrl]="'/resources/tags'"
+>
+    <app-select-answer-field
+        [abstractControl]="this.tagForm.controls.machineName"
+        formControlName="machineName"
+        helperText="'A máquina escolhida não poderá ser alterada após a criação do registro.'"
+        [label]="'Para qual máquina você quer criar uma tag?'"
+        [selectAnswerConfiguration]="machineSelectAnswerConfiguration"
+    ></app-select-answer-field>
+</app-default-form-page>

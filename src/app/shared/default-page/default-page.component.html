@@ -1,0 +1,11 @@
+<app-top-menu></app-top-menu>
+<app-side-menu></app-side-menu>
+<div class="content">
+    <app-content-top-menu
+        [moduleTitle]="this.moduleTitle"
+        [subPageLinks]="this.subPageLinks"
+    ></app-content-top-menu>
+    <div class="container">
+        <ng-content></ng-content>
+    </div>
+</div>

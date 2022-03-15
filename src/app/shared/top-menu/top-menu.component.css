@@ -1,0 +1,53 @@
+:host {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    :host {        
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding-top: 24px;
+    }
+
+    .side-menu-icon-and-user-photo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 24px 32px 0px 32px;
+    }
+
+    .top-menu-icon-wrapper {
+        cursor: pointer;
+        opacity: 0.6;
+    }
+
+    .top-menu-icon-wrapper:hover {
+        opacity: 1;
+    }
+
+    .user-photo {
+        border-radius: 50%;
+        height: 32px;
+        width: 32px;
+    }
+
+    .side-menu-wrapper {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .back-drop {        
+        background: rgba(0, 0, 0, 0.6);
+        flex: 1;
+    }
+
+    app-side-menu {
+        z-index: 2;
+    }
+}

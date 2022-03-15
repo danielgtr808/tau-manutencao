@@ -33,6 +33,20 @@ select:focus {
     color: rgba(0, 0, 0, 0.8);
 }
 
+.read-only-field {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+.helper-text {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
 .error-message {
     color: var(--color-input-error);
     display: none;

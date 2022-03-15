@@ -1,0 +1,51 @@
+:host {
+    background-color: var(--color-background-10);
+    border-radius: 8px;
+    box-shadow: 0px 7px 29px rgba(100, 100, 111, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 24px 24px 32px 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+textarea {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    outline: none;
+    overflow: hidden;
+    padding-bottom: 4px;
+    resize: none;
+    width: 100%;
+}
+
+textarea:focus {
+    border-color: var(--color-primary-10);
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.error-message {
+    color: var(--color-input-error);
+    display: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.form-group.error > textarea {
+    border-color: var(--color-input-error);
+    color: var(--color-input-error);
+}
+
+.form-group.error > .error-message {
+    display: block;
+}

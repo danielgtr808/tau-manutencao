@@ -1,11 +1,16 @@
-<span class="crud-form-label">{{this.label}}</span>
+<span class="crud-form-label">
+    {{this.label}}
+    <br>
+    <span class="helper-text">{{this.helperText}}</span>
+</span>
 <div class="form-group" [ngClass]="{ 'error': this.error !== ''}">
     <input
+        [attr.readonly]="this.readOnly ? true : null"
         (blur)="this.onTouched()"
         (focus)="this.onTouched()"
         (input)="this.onChange($event)"
         [(ngModel)]="this.value"
-        [type]="this.type"
+        [type]="this.type"        
     >
     <span class="error-message">{{this.error}}</span>
 </div>

@@ -1,0 +1,24 @@
+<tr>
+    <div class="data">
+        <td *ngIf="this.hasCheckbox">
+            <input
+                #checkbox
+                (click)="this.checkboxClick()"
+                type="checkbox"
+            >
+        </td>
+        <td [attr.data-header]="columnConfig.displayName" *ngFor="let columnConfig of this.columnOrder">
+            {{data[columnConfig.baseProperty]}}
+        </td>
+        <td class="redirect-cell" *ngIf="this.redirectLink !== ''">
+            <svg [routerLink]="this.redirectLink" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 5.5L12.5 10.5L7.5 15.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </td>
+    </div>
+    <td class="mobile-redirect">
+        <svg [routerLink]="this.redirectLink" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.5 5.5L12.5 10.5L7.5 15.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </td>
+</tr>

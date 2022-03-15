@@ -18,6 +18,21 @@ const routes: Routes = [
         path: 'manpower'
     },
     {
+        canActivate: [LoginGuard],
+        loadChildren: () => import('./resources/resources.module').then(m => m.ResourcesModule),
+        path: 'resources'
+    },
+    {
+        canActivate: [LoginGuard],
+        loadChildren: () => import('./interventions/interventions.module').then(m => m.InterventionsModule),
+        path: 'interventions'
+    },
+    {
+        canActivate: [LoginGuard],
+        loadChildren: () => import('./services/services.module').then(m => m.ServicesModule),
+        path: 'services'
+    },
+    {
         path: '**',
         redirectTo: ''
     }

@@ -1,0 +1,42 @@
+<app-default-form-page
+    [cancelUrl]="'/services/service-orders'"
+    [createCallback]="this.createCallback"
+    [createPageTitle]="''"
+    [formGroup]="this.formGroup"
+    [updatePageTitle]="'Editar ordem de serviço'"
+    [readFromIdCallback]="this.readFromIdCallback"
+    [saveUrl]="'/services/service-orders'"
+    [updateCallback]="this.updateCallback"
+>
+    <app-summary-container
+        [summaryData]="this.summaryData"
+        [title]="'Dados da solicitação de serviço'"
+    ></app-summary-container>
+    <app-radio-button-answer-field
+        [abstractControl]="this.serviceOrderForm.controls.status"
+        (onChangeEvent)="this.onStatusChange($event)"
+        formControlName="status"
+        [label]="'Qual o estado da solicitação de serviço?'"
+        [radioButtonOptions]="this.statusRadioButton"
+    ></app-radio-button-answer-field>
+    <app-long-answer-field
+        [abstractControl]="this.serviceOrderForm.controls.reprovationReason"        
+        formControlName="reprovationReason"
+        [label]="'Qual o motivo da reprovação?'"
+        *ngIf="this.showReprovationReasonField"
+    ></app-long-answer-field>
+
+    <app-select-answer-field
+        [abstractControl]="this.serviceOrderForm.controls.responsibleForMaintenance"
+        formControlName="responsibleForMaintenance"
+        [label]="'Quem foi o responsável pela manutenção?'"
+        *ngIf="this.showConclusionFieldsReasonField"
+        [selectAnswerConfiguration]="responsibleForMaintenanceIdSelectAnswerConfiguration"
+    ></app-select-answer-field>
+    <app-long-answer-field
+        [abstractControl]="this.serviceOrderForm.controls.conclusion"        
+        formControlName="conclusion"
+        [label]="'Qual a conclusão após realizar a manutenção? (Opcional)'"
+        *ngIf="this.showConclusionFieldsReasonField"
+    ></app-long-answer-field>
+</app-default-form-page>

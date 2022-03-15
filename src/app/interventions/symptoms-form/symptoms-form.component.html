@@ -1,0 +1,16 @@
+<app-default-form-page
+    [cancelUrl]="'/interventions/symptoms'"
+    [createCallback]="this.createCallback"
+    [createPageTitle]="'Novo sintoma'"
+    [formGroup]="this.formGroup"
+    [updatePageTitle]="'Editar sintoma'"
+    [readFromIdCallback]="this.readFromIdCallback"
+    [saveUrl]="'/interventions/symptoms'"
+    [updateCallback]="this.updateCallback"
+>
+    <app-long-answer-field
+        [abstractControl]="this.symptomForm.controls.description"
+        formControlName="description"
+        [label]="'Descreva o sintoma'"
+    ></app-long-answer-field>
+</app-default-form-page>

@@ -96,12 +96,15 @@ h1 {
     line-height: 38px;
 }
 
-table {
-    display: grid;
+.cell-typography, table {
     font-size: 16px;
     font-weight: 400;
     line-height: 19px;
     width: 100%;
+}
+
+table {
+    display: grid;
 }
 
 thead {
@@ -112,29 +115,10 @@ tbody {
     display: contents;
 }
 
-tr {
-    display: contents;
-}
-
 th {
     color: rgba(0, 0, 0, 0.8);
     padding: 12px;
     text-align: left;
-}
-
-td {
-    border-top: 1px solid var(--color-table-border);
-    color: rgba(0, 0, 0, 0.6);
-    padding: 28px 12px 28px 12px;
-}
-
-.redirect-cell > svg {
-    cursor: pointer;
-    opacity: 0.6;
-}
-
-.redirect-cell > svg:hover {
-    opacity: 1;
 }
 
 .crud-form {
@@ -175,12 +159,13 @@ td {
     cursor: pointer;
 }
 
-.primary-button {
+.primary-button, .delete-button {
     align-items: center;
     background-color: var(--color-primary-10);
     border: none;
     border-radius: 8px;
     color: white;
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     font-size: 16px;
@@ -198,6 +183,7 @@ td {
     background-color: transparent;
     border: none;
     color: var(--color-primary-10);
+    cursor: pointer;
     font-size: 14px;
     font-weight: 500;
     line-height: 16px;
@@ -208,42 +194,36 @@ td {
     color: var(--color-primary-50);
 }
 
+.delete-button {
+    background-color: #A61D24;
+}
+
+.delete-button:hover, .delete-button:focus {
+    background-color: #731B1F;
+}
+
+.primary-button:hover, .primary-button:focus {
+    background-color: var(--color-primary-50);
+}
+
+textarea {
+    font-family: inherit;
+}
+
+@media (max-width: 926px) {
+    app-crud-table > app-data-table > .table-functions {
+        align-items: center !important;
+        flex-direction: column !important;
+        gap: 24px;
+    }
+}
+
 @media (max-width: 870px) {
     table {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr auto !important;
     }
 
     thead {
         display: none;
-    }
-
-
-    tr {
-        border-top: 1px solid var(--color-table-border);
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        padding: 24px 0px;
-    }
-
-    tr:first-child {
-        border: none;
-    }
-
-    td {
-        border: none;
-        color: black;
-        font-size: 14px;
-        font-weight: normal;
-        line-height: 16px;
-        padding: 0px;
-    }
-
-    td::before {
-        content: attr(data-header) ":";
-        color: var(--color-table-header-mobile);
-        font-size: 14px;
-        font-weight: normal;
-        line-height: 16px;
     }
 }

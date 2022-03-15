@@ -1,28 +1,23 @@
-<app-side-menu></app-side-menu>
-<div class="content">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h1>Dashboard</h1>
-            </div>
-        </div>
-        <div class="indicator-row">
-            <app-ss-os-indicator [value]="this.pendentSsQuantity"></app-ss-os-indicator>
-            <app-ss-os-indicator [iconAndLabel]="'OS corretivas'"></app-ss-os-indicator>
-            <app-ss-os-indicator [iconAndLabel]="'OS preditivas'"></app-ss-os-indicator>
-            <app-ss-os-indicator [iconAndLabel]="'OS preventivas'"></app-ss-os-indicator>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <app-content-container [title]="'Últimas solicitações de serviço'">
-                    <app-data-table
-                        [dataTableConfiguration]="this.dataTableConfiguration"
-                        [enableSearch]="false"
-                    ></app-data-table>
-                </app-content-container>
-            </div>
+<app-default-page
+    [moduleTitle]="'Dashboard'"
+>
+    <div class="indicator-row">
+        <app-ss-os-indicator [value]="this.SSQtd"></app-ss-os-indicator>
+        <app-ss-os-indicator [iconAndLabel]="'OS corretivas'" [value]="this.correctiveSOQtd"></app-ss-os-indicator>
+        <app-ss-os-indicator [iconAndLabel]="'OS preditivas'" [value]="this.preditiveSOQtd"></app-ss-os-indicator>
+        <app-ss-os-indicator [iconAndLabel]="'OS preventivas'" [value]="this.preventiveSOQtd"></app-ss-os-indicator>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <app-content-container [title]="'Últimas solicitações de serviço'">
+                <app-data-table
+                    [dataTableConfiguration]="this.dataTableConfiguration"
+                    [enableSearch]="false"
+                ></app-data-table>
+            </app-content-container>
         </div>
     </div>
-</div>
+</app-default-page>
+
 
 

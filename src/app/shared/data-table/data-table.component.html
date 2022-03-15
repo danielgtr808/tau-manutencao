@@ -1,16 +1,51 @@
+<div class="table-functions" *ngIf="this.checkedData.length === 0">
+    <div class="user-table-functions">
+        <ng-content></ng-content>
+    </div>
+    <app-bordered-input
+        (inputEvent)="this.filterData($event)"
+        label="Pesquisar"
+        *ngIf="this.enableSearch"
+    ></app-bordered-input>
+</div>
+<div class="table-functions" *ngIf="this.checkedData.length > 0">
+    <span class="checked-data-number">
+        {{this.checkedData.length}} registro(s) selecionado(s)
+    </span>
+    <button class="delete-button" (click)="this.showDeleteModal()">
+        <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 4.16669H11.6667" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5 6.83331V10.8333" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7.66406 6.83331V10.8333" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1.66406 4.16669L2.33073 12.1667C2.33073 12.5203 2.4712 12.8594 2.72125 13.1095C2.9713 13.3595 3.31044 13.5 3.66406 13.5H8.99739C9.35101 13.5 9.69015 13.3595 9.9402 13.1095C10.1902 12.8594 10.3307 12.5203 10.3307 12.1667L10.9974 4.16669" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4.33203 4.16666V2.16667C4.33203 1.98986 4.40227 1.82029 4.52729 1.69526C4.65232 1.57024 4.82189 1.5 4.9987 1.5H7.66536C7.84217 1.5 8.01174 1.57024 8.13677 1.69526C8.26179 1.82029 8.33203 1.98986 8.33203 2.16667V4.16666" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Excluir
+    </button>
+</div>
 <table class="responsive-table" *ngIf="this.dataTableConfiguration" [ngStyle]="{ 'grid-template-columns': this.gridColumns }">
     <thead>
         <tr>
+            <th *ngIf="this.dataTableConfiguration.deleteDataFn">
+                <input #headerCheckbox (click)="this.headerCheckboxClick()" type="checkbox">
+            </th>
             <th *ngFor="let columnConfig of this.dataTableConfiguration.columnOrder">
                 {{columnConfig.displayName}}
             </th>
+            <th *ngIf="this.dataTableConfiguration.redirectLinkFn"></th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let data of this.data">
-            <td [attr.data-header]="columnConfig.displayName" *ngFor="let columnConfig of this.dataTableConfiguration.columnOrder">
-                {{data[columnConfig.baseProperty]}}
-            </td>
-        </tr>
+        <app-responsive-row
+            [checked]="this.isChecked(data)"
+            (checkEvent)="this.checkEvent($event)"
+            [columnOrder]="this.dataTableConfiguration.columnOrder"
+            [data]="data"
+            [hasCheckbox]="this.dataTableConfiguration.deleteDataFn ? true : false"
+            *ngFor="let data of this.filteredData ?? this.data"
+            [redirectLink]="this.dataTableConfiguration.redirectLinkFn ? this.dataTableConfiguration.redirectLinkFn(data) : ''"
+            (uncheckEvent)="this.uncheckEvent($event)"
+        ></app-responsive-row>
     </tbody>
 </table>
+<span class="cell-typography no-data-found" *ngIf="(this.filteredData ?? this.data).length === 0">Nenhum registro encontrado</span>

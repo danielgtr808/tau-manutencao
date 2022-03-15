@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, ValidatorFn } from '@angular/forms';
 import { never } from 'rxjs';
 import TypedFormGroup from './helpers/typed-form-group.type';
 import ValidatorReturn from './helpers/validator-return.type';
@@ -20,17 +20,17 @@ export class TypedFormBuilderService {
         T,
         U extends {[key in keyof T]: false | true},
         V extends Validator<RemoveUndefinedProperties<U>>
-    > (type: T, selected: U, validator?: V): TypedFormGroup<RemoveUndefinedProperties<U>> {
+    > (type: T, selected: U, fieldValidators?: V, crossFieldValidators: ValidatorFn[] = []): TypedFormGroup<RemoveUndefinedProperties<U>> {
         const abstractControls: {[key: string]: AbstractControl } = { };
 
         for(const property of Object.keys(selected)) {
             abstractControls[property] = new FormControl(
                 '',
                 // @ts-ignore
-                validator ? validator[property] : []
+                fieldValidators ? fieldValidators[property] : []
             );
         }
 
-        return this.formBuilder.group({...abstractControls}) as any;
+        return this.formBuilder.group({...abstractControls}, { validators: crossFieldValidators }) as any;
     }
 }

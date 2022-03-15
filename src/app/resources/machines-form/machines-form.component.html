@@ -1,0 +1,33 @@
+<app-default-form-page
+    [cancelUrl]="'/resources/machines'"
+    [createCallback]="this.createCallback"
+    [createPageTitle]="'Nova máquina'"
+    [formGroup]="this.formGroup"
+    [updatePageTitle]="'Editar máquina'"
+    [readFromIdCallback]="this.readFromIdCallback"
+    [saveUrl]="'/resources/machines'"
+    [updateCallback]="this.updateCallback"
+>
+    <app-short-answer-field
+        [abstractControl]="this.machineForm.controls.name"
+        formControlName="name"
+        [helperText]="'O nome da máquina não pode ser alterado após a criação do registro.'"
+        [label]="'Qual o nome da máquina?'"
+        [readOnly]="this.isUpdate"
+        [type]="'text'"
+    ></app-short-answer-field>
+    <app-select-answer-field
+        [abstractControl]="this.machineForm.controls.familyName"
+        formControlName="familyName"
+        [helperText]="'A família de máquinas não pode ser alterado após a criação do registro.'"
+        [label]="'A qual família de máquinas essa máquina pertence?'"
+        [readOnly]="this.isUpdate"
+        [selectAnswerConfiguration]="machineFamilySelectAnswerConfiguration"
+    ></app-select-answer-field>
+    <app-select-answer-field
+        [abstractControl]="this.machineForm.controls.departmentName"
+        formControlName="departmentName"
+        [label]="'Qual o departamento da máquina?'"
+        [selectAnswerConfiguration]="departmentSelectAnswerConfiguration"
+    ></app-select-answer-field>
+</app-default-form-page>

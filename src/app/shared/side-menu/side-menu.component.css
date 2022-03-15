@@ -76,3 +76,25 @@ app-logo {
     opacity: 1;
 }
 
+.collapse-button {
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .collapse-button {
+        align-items: center;
+        background-color: var(--color-background-10);
+        border-radius: 50%;
+        box-shadow: 0px 7px 29px rgba(100, 100, 111, 0.2);
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        left: 268px;
+        position: absolute;
+        top: 32px;
+        transform: translateX(-50%);
+        width: 40px;
+    }
+}
+

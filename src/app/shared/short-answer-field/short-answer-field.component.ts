@@ -17,6 +17,7 @@ export class ShortAnswerFieldComponent implements ControlValueAccessor {
     
     @Input() abstractControl: AbstractControl | undefined;
     @Input() formControlName: string | undefined;
+    @Input() helperText: string = "";
     @Input() label: string = "";
     @Input() readOnly: boolean = false;
     @Input() type: string = "text";

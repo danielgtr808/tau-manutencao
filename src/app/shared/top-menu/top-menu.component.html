@@ -1,0 +1,13 @@
+<div class="side-menu-icon-and-user-photo">
+    <div class="top-menu-icon-wrapper" (click)="this.showSideMenu = true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 8H20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 16H20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>            
+    </div>
+    <img src="./assets/storage/users/manutentor@tau.com.br/profilePicture.png" alt="Foto de perfil" class="user-photo">
+</div>
+<div class="side-menu-wrapper" *ngIf="this.showSideMenu">
+    <app-side-menu (closeAction)="this.hideSidemenu()"></app-side-menu>
+    <div class="back-drop"></div>
+</div>

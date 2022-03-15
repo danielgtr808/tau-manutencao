@@ -27,9 +27,24 @@ input {
     width: 100%;
 }
 
+input[readonly] {
+    border: none;
+}
+
 input:focus {
     border-color: var(--color-primary-10);
     color: rgba(0, 0, 0, 0.8);
+}
+
+input[readonly]:focus {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.helper-text {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
 }
 
 .error-message {

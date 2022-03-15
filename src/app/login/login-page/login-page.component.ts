@@ -3,7 +3,7 @@ import { ErrorMessageComponent } from 'src/app/shared/error-message/error-messag
 import { FormGroup } from '@angular/forms';
 import LoginPage from './login-page.model';
 import LoginPageValidator from './login-page.validator';
-import { LoginService } from '../../backend/login/login.service';
+import { LoginService } from '../../backend/models/login/login.service';
 import { Router } from '@angular/router';
 import { TypedFormBuilderService } from 'src/app/shared/typed-form-builder.service';
 

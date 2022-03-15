@@ -1,0 +1,16 @@
+<app-default-form-page
+    [cancelUrl]="'/interventions/causes'"
+    [createCallback]="this.createCallback"
+    [createPageTitle]="'Nova causa'"
+    [formGroup]="this.formGroup"
+    [updatePageTitle]="'Editar causa'"
+    [readFromIdCallback]="this.readFromIdCallback"
+    [saveUrl]="'/interventions/causes'"
+    [updateCallback]="this.updateCallback"
+>
+    <app-long-answer-field
+        [abstractControl]="this.causeForm.controls.description"
+        formControlName="description"
+        [label]="'Descreva a causa'"
+    ></app-long-answer-field>
+</app-default-form-page>

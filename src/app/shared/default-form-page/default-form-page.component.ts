@@ -36,7 +36,15 @@ export class DefaultFormPageComponent implements OnInit {
     ngOnInit(): void {
         this._pageTitle = this.createPageTitle;
         if(this._idParam !== "new") {
-            const modelToUpdate = this.readFromIdCallback!(parseInt(this._idParam));
+            if(!this.updateCallback) {
+                this.router.navigateByUrl(this.cancelUrl);
+                return;
+            }
+
+            const numericIdParam = parseInt(this._idParam)
+            const modelToUpdate = this.readFromIdCallback!(
+                isNaN(numericIdParam) ? this._idParam : numericIdParam
+            );
             if(!modelToUpdate) return;
 
             this.formGroup!.setValue(modelToUpdate);
@@ -55,11 +63,15 @@ export class DefaultFormPageComponent implements OnInit {
             this.updateCallback!(this.formGroup!.value);
              
         if(!result.success) {
-            this.errorMessageComponent?.showMessage(result.errorMessage);
+            this.showErrorMessage(result.errorMessage);
             return;
         }
 
         this.router.navigateByUrl(this.saveUrl);
+    }
+
+    showErrorMessage(errorMessage: string) {
+        this.errorMessageComponent?.showMessage(errorMessage);
     }
 
 }
