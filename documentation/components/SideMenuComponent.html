@@ -68,6 +68,13 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Exibe o menu lateral, que é responsável pela navegação principal (acesso aos módulos)</p>
+
+    </p>
 
 
 
@@ -189,7 +196,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/shared/side-menu/side-menu.component.ts:11</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/shared/side-menu/side-menu.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -246,9 +253,16 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/shared/side-menu/side-menu.component.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/shared/side-menu/side-menu.component.ts:16</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Quando o menu lateral está no modo mobile, este evento é emitido toda vez que o elemento
+com a classe &quot;collapse-button&quot; é clicado.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -279,14 +293,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="15"
-                            class="link-to-prism">src/app/shared/side-menu/side-menu.component.ts:15</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/app/shared/side-menu/side-menu.component.ts:22</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Evento emitido quando o usuário clica no elemento de classe &quot;collapse-button&quot;.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -316,14 +332,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="19"
-                            class="link-to-prism">src/app/shared/side-menu/side-menu.component.ts:19</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">src/app/shared/side-menu/side-menu.component.ts:28</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Faz chamada ao serviço {@link: LoginService} para realizar o logout do usuário.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -353,14 +371,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="24"
-                            class="link-to-prism">src/app/shared/side-menu/side-menu.component.ts:24</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">src/app/shared/side-menu/side-menu.component.ts:36</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Quando em mobile, fecha o menu lateral após o usuário clicar em algum dos links
+de navegação.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -396,7 +417,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/shared/side-menu/side-menu.component.ts:13</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/shared/side-menu/side-menu.component.ts:18</a></div>
                         </td>
                     </tr>
 
@@ -411,27 +432,39 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, EventEmitter, Output } from &#x27;@angular/core&#x27;;
 import { LoginService } from &#x27;src/app/backend/models/login/login.service&#x27;;
-
+/**
+ * Exibe o menu lateral, que é responsável pela navegação principal (acesso aos módulos)
+ */
 @Component({
     selector: &#x27;app-side-menu&#x27;,
     templateUrl: &#x27;./side-menu.component.html&#x27;,
     styleUrls: [&#x27;./side-menu.component.css&#x27;]
 })
 export class SideMenuComponent {
-
+    /**
+     * Quando o menu lateral está no modo mobile, este evento é emitido toda vez que o elemento
+     * com a classe &quot;collapse-button&quot; é clicado.
+     */
     @Output() closeAction &#x3D; new EventEmitter();
 
     constructor(public loginService: LoginService) { }
-
+    /**
+     * Evento emitido quando o usuário clica no elemento de classe &quot;collapse-button&quot;.
+     */
     collapseButtonClick() {
         this.closeAction.emit()
     }
-
+    /**
+     * Faz chamada ao serviço {@link: LoginService} para realizar o logout do usuário.
+     */
     logOut(): void {
         this.loginService.logOut();
         this.closeAction.emit();
     }
-
+    /**
+     * Quando em mobile, fecha o menu lateral após o usuário clicar em algum dos links
+     * de navegação.
+     */
     sideMenuClick() {
         this.closeAction.emit();
     }

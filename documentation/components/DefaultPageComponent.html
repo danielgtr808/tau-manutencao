@@ -68,6 +68,14 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Contém a estrutura html básica que toda página, desta aplicação, deve ter
+para ser responsiva</p>
+
+    </p>
 
 
 
@@ -157,7 +165,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/shared/default-page/default-page.component.ts:12</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/shared/default-page/default-page.component.ts:20</a></div>
                             </td>
                         </tr>
 
@@ -188,9 +196,15 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/shared/default-page/default-page.component.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/shared/default-page/default-page.component.ts:16</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>É o título principal (H1) que aparecerá no topo da página</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -214,9 +228,15 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/shared/default-page/default-page.component.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/shared/default-page/default-page.component.ts:20</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Navegação secundária da pagina, veja <a href="../components/ContentTopMenuComponent.html">ContentTopMenuComponent</a></p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -231,15 +251,23 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input } from &#x27;@angular/core&#x27;;
 import SubPageLink from &#x27;../content-top-menu/sub-page-link.model&#x27;;
-
+/**
+ * Contém a estrutura html básica que toda página, desta aplicação, deve ter
+ * para ser responsiva
+ */
 @Component({
     selector: &#x27;app-default-page&#x27;,
     templateUrl: &#x27;./default-page.component.html&#x27;,
     styleUrls: [&#x27;./default-page.component.css&#x27;]
 })
 export class DefaultPageComponent {
-
+    /**
+     * É o título principal (H1) que aparecerá no topo da página
+     */
     @Input() moduleTitle: string &#x3D; &quot;&quot;;
+    /**
+     * Navegação secundária da pagina, veja {@link ContentTopMenuComponent}
+     */
     @Input() subPageLinks: SubPageLink[] &#x3D; [];
 
     constructor() { }

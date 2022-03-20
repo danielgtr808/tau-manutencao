@@ -68,6 +68,15 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Usado para exibir um resumo de informações ou uma série de campos somente leitura em um formulário, exemplo:</p>
+<p>Na página de ordem de serviço (service-order-form), existe um resumo da solicitação de serviço que deu origem
+a OS.</p>
+
+    </p>
 
 
 
@@ -157,7 +166,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/shared/summary-container/summary-container.component.ts:12</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/shared/summary-container/summary-container.component.ts:22</a></div>
                             </td>
                         </tr>
 
@@ -188,9 +197,15 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/shared/summary-container/summary-container.component.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/shared/summary-container/summary-container.component.ts:18</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Dados que serão exibidos dentro do container.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -214,9 +229,15 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/shared/summary-container/summary-container.component.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/shared/summary-container/summary-container.component.ts:22</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Título (H3) do container.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -231,15 +252,25 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input } from &#x27;@angular/core&#x27;;
 import SummaryData from &#x27;./summary-data.type&#x27;;
-
+/**
+ * Usado para exibir um resumo de informações ou uma série de campos somente leitura em um formulário, exemplo:
+ * 
+ * Na página de ordem de serviço (service-order-form), existe um resumo da solicitação de serviço que deu origem
+ * a OS.
+ */
 @Component({
     selector: &#x27;app-summary-container&#x27;,
     templateUrl: &#x27;./summary-container.component.html&#x27;,
     styleUrls: [&#x27;./summary-container.component.css&#x27;]
 })
 export class SummaryContainerComponent {
-
+    /**
+     * Dados que serão exibidos dentro do container.
+     */
     @Input() summaryData: SummaryData[] &#x3D; [];
+    /**
+     * Título (H3) do container.
+     */
     @Input() title: string &#x3D; &quot;&quot;;
 
     constructor() { }

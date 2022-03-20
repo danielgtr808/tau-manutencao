@@ -29,5 +29,4 @@ export class CrudTableComponent implements OnInit {
             console.error('É necessário fornecer o parâmetro de entrada "DataTableConfiguration".')
         }
     }
-
 }

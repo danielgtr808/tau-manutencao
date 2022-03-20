@@ -68,14 +68,16 @@
 </p>
 
 
-
-
     <p class="comment">
-        <h3>Implements</h3>
+        <h3>Description</h3>
     </p>
     <p class="comment">
-                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+        <p>Usado para reduzir a quantidade de código HTML no componente <a href="../components/SideMenuComponent.html">SideMenuComponent</a>, contém os SVGs
+de todos os links do menu lateral, que são selecionados a partir do parâmetro de entrada &quot;type&quot;</p>
+
     </p>
+
+
 
 
 <section>
@@ -126,20 +128,6 @@
     <table class="table table-sm table-bordered index-table">
         <tbody>
 
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Methods</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#ngOnInit" >ngOnInit</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -177,7 +165,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/shared/side-menu-item/side-menu-item.component.ts:11</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/shared/side-menu-item/side-menu-item.component.ts:20</a></div>
                             </td>
                         </tr>
 
@@ -208,9 +196,16 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/shared/side-menu-item/side-menu-item.component.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/shared/side-menu-item/side-menu-item.component.ts:16</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Indica para qual endereço o usuário deve ser redirecionado após clicar no item. Também serve para estilizar
+o componente com a classe &quot;active&quot;</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -234,79 +229,49 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/shared/side-menu-item/side-menu-item.component.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/shared/side-menu-item/side-menu-item.component.ts:20</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Escolhe o ícone e o label do item</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
 
 
 
-    <section>
-    
-    <h3 id="methods">
-        Methods
-    </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="ngOnInit"></a>
-                    <span class="name">
-                        <span ><b>ngOnInit</b></span>
-                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>ngOnInit()</code>
-                </td>
-            </tr>
 
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="15"
-                            class="link-to-prism">src/app/shared/side-menu-item/side-menu-item.component.ts:15</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</section>
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnInit } from &#x27;@angular/core&#x27;;
-
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input } from &#x27;@angular/core&#x27;;
+/**
+ * Usado para reduzir a quantidade de código HTML no componente {@link SideMenuComponent}, contém os SVGs
+ * de todos os links do menu lateral, que são selecionados a partir do parâmetro de entrada &quot;type&quot;
+ */
 @Component({
     selector: &#x27;app-side-menu-item&#x27;,
     templateUrl: &#x27;./side-menu-item.component.html&#x27;,
     styleUrls: [&#x27;./side-menu-item.component.css&#x27;]
 })
-export class SideMenuItemComponent implements OnInit {
-
+export class SideMenuItemComponent {
+    /**
+     * Indica para qual endereço o usuário deve ser redirecionado após clicar no item. Também serve para estilizar
+     * o componente com a classe &quot;active&quot;
+     */
     @Input() routerLink: string &#x3D; &#x27;&#x27;;
+    /**
+     * Escolhe o ícone e o label do item
+     */
     @Input() type: &quot;Dashboard&quot; | &quot;Intervenções&quot; | &quot;Mão de obra&quot; | &quot;Recursos&quot; | &quot;Relatórios&quot; |&quot;Serviços&quot; &#x3D; &quot;Dashboard&quot;
 
     constructor() { }
-
-    ngOnInit(): void {
-    }
 
 }
 </code></pre>

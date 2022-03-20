@@ -227,6 +227,24 @@
             </tr>
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>As propriedades de um objeto podem ser de três tipos: string, number e symbol, exemplo;
+const example = {
+     a: &quot;exemplo de propriedade string&quot;,
+     123: &quot;exemplo de propriedade number&quot;,
+}</p>
+<p>Nesse examplo, a propriedade &quot;a&quot; é uma string, e a propriedade &quot;123&quot; é um número (não quer
+dizer que seus tipos sejam string e number, respectivamente, mas que, o nome das propriedades
+possuem esses tipos).</p>
+<p>Existe um terceiro tipo de nome de propriedade, que é o Symbol, você pode saber mais sobre el
+aqui: <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Symbol">https://developer.mozilla.org/pt-BR/docs/Glossary/Symbol</a></p>
+<p>Por ser um valor gerado durante o tempo de execução, o intelissense tem problemas em fornecer
+opções de auto-preenchimento quando se trabalha com o tipo &quot;key of&quot; de um tipo genérico. Por
+conta disso, esse tipo remove as propriedades do tipo &quot;Symbol&quot;</p>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
                     <code>    <code></code>
 </code>
                 </td>
@@ -241,6 +259,14 @@
                 <td class="col-md-4">
                     <a name="Result"></a>
                     <span class="name "><b>Result</b><a href="#Result"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>É um tipo usado na implementação do que é conhecido por &quot;Exhaustive Type Checking&quot;. Você pode
+saber mais sobre lendo este artigo:</p>
+<p><a href="https://blog.logrocket.com/improve-error-handling-typescript-exhaustive-type-checking/">https://blog.logrocket.com/improve-error-handling-typescript-exhaustive-type-checking/</a></p>
+</div>
                 </td>
             </tr>
             <tr>
@@ -281,6 +307,12 @@
             </tr>
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Tipo criado para evitar o uso de &quot;any&quot; quando se fala de um objetivo genérico.</p>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
                     <code>    <code>literal type</code>
 </code>
                 </td>
@@ -317,6 +349,14 @@
             </tr>
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Tipo usado para substituir o &quot;FormGroup&quot; do módulo &quot;ReactiveFormsModule&quot;,
+permitindo que se use análize estática para saber quais propriedades
+estão presentes em um grupo de formulário, baseado em um tipo genérico T.</p>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
                     <code>    <code></code>
 </code>
                 </td>
@@ -335,6 +375,14 @@
             </tr>
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Cada propriedade do  pode possuir um validador (máximo/mínimo número de caracteres,
+campo necessário, etc...), esse tipo ajuda a criar uma classe em que é necessário escrever um validador
+para cada propriedade de um objeto genérico do tipo &quot;T&quot;, para ser associado a um TypedFormGroup.</p>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
                     <code>    <code></code>
 </code>
                 </td>
@@ -349,6 +397,13 @@
                 <td class="col-md-4">
                     <a name="ValidatorReturn"></a>
                     <span class="name "><b>ValidatorReturn</b><a href="#ValidatorReturn"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Tipo que fucniona como syntax sujar, ajudando a reduzir a quantidade de vezes que é necessário
+escrever o tipo de retorno para os validadadores da classe que implementa o tipo </p>
+</div>
                 </td>
             </tr>
             <tr>

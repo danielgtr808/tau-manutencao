@@ -59,7 +59,6 @@
         formControlName="status"
         [label]="'Qual o estado da solicitação de serviço?'"
         *ngIf="this.isUpdate"
-        (onChangeEvent)="this.onStatusChange($event)"
         [radioButtonOptions]="this.statusRadioButton"
     ></app-radio-button-answer-field>
     <app-long-answer-field

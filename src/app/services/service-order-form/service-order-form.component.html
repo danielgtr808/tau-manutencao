@@ -14,7 +14,6 @@
     ></app-summary-container>
     <app-radio-button-answer-field
         [abstractControl]="this.serviceOrderForm.controls.status"
-        (onChangeEvent)="this.onStatusChange($event)"
         formControlName="status"
         [label]="'Qual o estado da solicitação de serviço?'"
         [radioButtonOptions]="this.statusRadioButton"

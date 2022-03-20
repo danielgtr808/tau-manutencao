@@ -65,6 +65,13 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Usado para exibir mensagens de erro em formulários</p>
+
+    </p>
 
 
 
@@ -175,7 +182,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/shared/error-message/error-message.component.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/shared/error-message/error-message.component.ts:23</a></div>
                             </td>
                         </tr>
 
@@ -242,14 +249,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="22"
-                            class="link-to-prism">src/app/shared/error-message/error-message.component.ts:22</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/shared/error-message/error-message.component.ts:32</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Usado para fechar a visualização da mensagem de erro.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -279,14 +288,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">src/app/shared/error-message/error-message.component.ts:26</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/app/shared/error-message/error-message.component.ts:39</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Usado para exibir uma mensagem de erro, caso ela seja diferente de uma string vazia.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -297,6 +308,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -311,6 +323,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Mensagem de erro a ser exibida.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -354,10 +370,18 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/shared/error-message/error-message.component.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/shared/error-message/error-message.component.ts:23</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Faz referência a esse componente, é usado para mudar o valor do estilo &quot;display&quot;
+entr &quot;flex&quot; (exibindo uma mensagem) e &quot;none&quot; (quando não existe nenhuma nova
+mensagem)</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -386,10 +410,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/shared/error-message/error-message.component.ts:13</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/shared/error-message/error-message.component.ts:17</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Mensagem de erro a ser exibida.</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -399,8 +429,10 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges } from &#x27;@angular/core&#x27;;
-
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, ElementRef } from &#x27;@angular/core&#x27;;
+/**
+ * Usado para exibir mensagens de erro em formulários
+ */
 @Component({
     selector: &#x27;app-error-message&#x27;,    
     template: &#x60;
@@ -410,20 +442,31 @@
     styleUrls: [&#x27;./error-message.component.css&#x27;]
 })
 export class ErrorMessageComponent {
-
+    /**
+     * Mensagem de erro a ser exibida.
+     */
     public message: string &#x3D; &quot;&quot;;
-
+    /**
+     * Faz referência a esse componente, é usado para mudar o valor do estilo &quot;display&quot;
+     * entr &quot;flex&quot; (exibindo uma mensagem) e &quot;none&quot; (quando não existe nenhuma nova
+     * mensagem)
+     */
     private _elementRef: HTMLElement;
 
     constructor(elementRef: ElementRef) {
         this._elementRef &#x3D; elementRef.nativeElement;
         this.close();
     }
-
+    /**
+     * Usado para fechar a visualização da mensagem de erro.
+     */
     close() {
         this._elementRef.style.display &#x3D; &quot;none&quot;;
     }
-
+    /**
+     * Usado para exibir uma mensagem de erro, caso ela seja diferente de uma string vazia.
+     * @param message Mensagem de erro a ser exibida.
+     */
     showMessage(message: string): void {
         if(message &#x3D;&#x3D;&#x3D; &quot;&quot;) return;
         this.message &#x3D; message;

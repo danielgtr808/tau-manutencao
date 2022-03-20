@@ -68,6 +68,21 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Utilizado para facilitar a criação de páginas de formulários (criação e edição de registros). Para utilizar
+esse componente, utilize elementos de formulário (input, select, textarea...) ou componentes que implementem
+a interface ControValueAcessor. Exemplo:
+<app-default-form-page>
+     <input formControlName="example" />
+     &lt;select formControlName-&quot;example2&quot; &gt;&lt;option...</select>
+</app-default-form-page></p>
+<p>O componente faz uso de reactive forms, portanto, é importante que todos os elementos inseridos dentro de
+&quot;app-default-form-page&quot; tenham o atributo &quot;formControlName&quot;</p>
+
+    </p>
 
 
     <p class="comment">
@@ -237,7 +252,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:26</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:75</a></div>
                             </td>
                         </tr>
 
@@ -310,9 +325,16 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:28</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Caso o usuário queira cancelar a criação/edição do registro, ele será redirecionado para
+este enderçeo.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -331,9 +353,15 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:32</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Qual função deverá ser chamada quando o usuário clicar no botão &quot;Criar registro&quot;</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -357,9 +385,16 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:37</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Qual deve ser o título principal da página (H1) quando o usuário estiver criando
+um novo registro.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -378,9 +413,18 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:44</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>O componente trabalha injetando elementos que possuem ligação com um formulário
+reativo (ReactiveForms), ou seja, precisam estar dentro de uma tag &quot;form&quot; que
+possua um atributo do formGroup que as contêm. Essa formgroup é fornecido por esse
+parâmetro.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -399,9 +443,15 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:57</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Qual função deverá ser chamada quando o usuário clicar no botão &quot;Atualizar registro&quot;</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -425,9 +475,15 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:21</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:61</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Para onde o usuário deverá ser redirecionado quando salvar/editar um registro.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -446,9 +502,15 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:18</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:48</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Qual função deverá ser chamada quando o usuário clicar no botão &quot;Criar registro&quot;</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -472,9 +534,16 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:19</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:53</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Qual deve ser o título principal da página (H1) quando o usuário estiver editando
+um novo registro.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -506,14 +575,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="36"
-                            class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:36</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="88"
+                            class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:88</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Após a inicialização do componente, verifica-se se o usuário esta tentando criar
+ou atualizar um registro através do parâmetro do rota &quot;id&quot;.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -543,18 +615,27 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="55"
-                            class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:55</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="112"
+                            class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:112</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Chamada quando o usuário tenta criar ou atualizar um registro. Faz a verificação
+se não existe nenhum erro no formulário,caso não, continua o processo baseando-se
+nos callbacks &quot;createCallback&quot; e &quot;updateCallback&quot;.</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -580,14 +661,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="73"
-                            class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:73</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="133"
+                            class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:133</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Exibe uma mensagem de erro através do compomnente <a href="../components/ErrorMessageComponent.html">ErrorMessageComponent</a>.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -598,6 +681,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -612,6 +696,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Mensagem de erro a ser exibida.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -655,10 +743,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:70</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Variável que armazena o valor do parâmetro &quot;id&quot;, presente na url.</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -687,10 +781,17 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:26</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:75</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Após decidir se um novo registro será criado ou se será atualizado, baseando-se no valor
+do parâmetro &quot;id&quot;, o título de página escolhido será atribuído a essa variável.</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -722,10 +823,17 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:23</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:66</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Referência ao componente &quot;ErrorMessage&quot;, que é usado para exibir mensagens de erro
+que não são específicas a um único campo do formulário.</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -751,7 +859,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:32</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="81" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:81</a></div>
                                 </td>
                             </tr>
 
@@ -767,26 +875,75 @@ import { ErrorMessageComponent } from &#x27;../error-message/error-message.compo
 import { FormGroup } from &#x27;@angular/forms&#x27;;
 import Result from &#x27;../helpers/result.type&#x27;;
 import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
-
+/**
+ * Utilizado para facilitar a criação de páginas de formulários (criação e edição de registros). Para utilizar
+ * esse componente, utilize elementos de formulário (input, select, textarea...) ou componentes que implementem
+ * a interface ControValueAcessor. Exemplo:
+ * &lt;app-default-form-page&gt;
+ *      &lt;input formControlName&#x3D;&quot;example&quot; /&gt;
+ *      &lt;select formControlName-&quot;example2&quot; &gt;&lt;option...&lt;/select&gt;
+ * &lt;/app-default-form-page&gt;
+ * 
+ * O componente faz uso de reactive forms, portanto, é importante que todos os elementos inseridos dentro de 
+ * &quot;app-default-form-page&quot; tenham o atributo &quot;formControlName&quot;
+ */
 @Component({
-  selector: &#x27;app-default-form-page&#x27;,
-  templateUrl: &#x27;./default-form-page.component.html&#x27;,
-  styleUrls: [&#x27;./default-form-page.component.css&#x27;]
+    selector: &#x27;app-default-form-page&#x27;,
+    templateUrl: &#x27;./default-form-page.component.html&#x27;,
+    styleUrls: [&#x27;./default-form-page.component.css&#x27;]
 })
 export class DefaultFormPageComponent implements OnInit {
-
+    /**
+     * Caso o usuário queira cancelar a criação/edição do registro, ele será redirecionado para 
+     * este enderçeo.
+     */
     @Input() cancelUrl: string &#x3D; &quot;&quot;;
+    /**
+     * Qual função deverá ser chamada quando o usuário clicar no botão &quot;Criar registro&quot;
+     */
     @Input() createCallback: ((model: any) &#x3D;&gt; Result&lt;undefined, string&gt;) | undefined
+    /**
+     * Qual deve ser o título principal da página (H1) quando o usuário estiver criando
+     * um novo registro.
+     */
     @Input() createPageTitle: string &#x3D; &quot;&quot;;
+    /**
+     * O componente trabalha injetando elementos que possuem ligação com um formulário 
+     * reativo (ReactiveForms), ou seja, precisam estar dentro de uma tag &quot;form&quot; que
+     * possua um atributo do formGroup que as contêm. Essa formgroup é fornecido por esse
+     * parâmetro.
+     */
     @Input() formGroup: FormGroup | undefined;
+    /**
+     * Qual função deverá ser chamada quando o usuário clicar no botão &quot;Criar registro&quot;
+     */
     @Input() updateCallback: ((model: any) &#x3D;&gt; Result&lt;undefined, string&gt;) | undefined
+    /**
+     * Qual deve ser o título principal da página (H1) quando o usuário estiver editando
+     * um novo registro.
+     */
     @Input() updatePageTitle: string &#x3D; &quot;&quot;;
+    /**
+     * Qual função deverá ser chamada quando o usuário clicar no botão &quot;Atualizar registro&quot;
+     */
     @Input() readFromIdCallback: ((id: any) &#x3D;&gt; any) | undefined
+    /**
+     * Para onde o usuário deverá ser redirecionado quando salvar/editar um registro.
+     */
     @Input() saveUrl: string &#x3D; &quot;&quot;;
-
+    /**
+     * Referência ao componente &quot;ErrorMessage&quot;, que é usado para exibir mensagens de erro
+     * que não são específicas a um único campo do formulário.
+     */
     @ViewChild(ErrorMessageComponent) errorMessageComponent: ErrorMessageComponent | undefined;
-    
+    /**
+     * Variável que armazena o valor do parâmetro &quot;id&quot;, presente na url.
+     */
     private _idParam: string;
+    /**
+     * Após decidir se um novo registro será criado ou se será atualizado, baseando-se no valor
+     * do parâmetro &quot;id&quot;, o título de página escolhido será atribuído a essa variável.
+     */
     private _pageTitle: string &#x3D; &quot;&quot;;
 
     constructor(private activatedRoute: ActivatedRoute, private router: Router) {
@@ -796,7 +953,10 @@ export class DefaultFormPageComponent implements OnInit {
     get pageTitle(): string {
         return this._pageTitle;
     }
-
+    /**
+     * Após a inicialização do componente, verifica-se se o usuário esta tentando criar
+     * ou atualizar um registro através do parâmetro do rota &quot;id&quot;.
+     */
     ngOnInit(): void {
         this._pageTitle &#x3D; this.createPageTitle;
         if(this._idParam !&#x3D;&#x3D; &quot;new&quot;) {
@@ -815,7 +975,12 @@ export class DefaultFormPageComponent implements OnInit {
             this._pageTitle &#x3D; this.updatePageTitle
         }
     }
-
+    /**
+     * Chamada quando o usuário tenta criar ou atualizar um registro. Faz a verificação
+     * se não existe nenhum erro no formulário,caso não, continua o processo baseando-se
+     * nos callbacks &quot;createCallback&quot; e &quot;updateCallback&quot;.
+     * @returns 
+     */
     saveChanges() {
         if(this.formGroup!.invalid) {
             this.formGroup!.markAllAsTouched();
@@ -833,7 +998,10 @@ export class DefaultFormPageComponent implements OnInit {
 
         this.router.navigateByUrl(this.saveUrl);
     }
-
+    /**
+     * Exibe uma mensagem de erro através do compomnente {@link ErrorMessageComponent}.
+     * @param errorMessage Mensagem de erro a ser exibida.
+     */
     showErrorMessage(errorMessage: string) {
         this.errorMessageComponent?.showMessage(errorMessage);
     }

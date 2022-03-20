@@ -68,6 +68,15 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Usado para exibir dados tabulares através de um array de objetos. Possui configurações para
+habilitar filtro (full text search), operações de exclusão e redirecionamento. Também ajuda
+a exibir os dados corretamentas quando a tabela se adapta a largura do dispositivo.</p>
+
+    </p>
 
 
     <p class="comment">
@@ -204,9 +213,6 @@
                                 <a href="#uncheckEvent" >uncheckEvent</a>
                             </li>
                             <li>
-                                <a href="#updateData" >updateData</a>
-                            </li>
-                            <li>
                                     <span class="modifier">Private</span>
                                 <a href="#updateHeaderCheckboxStatus" >updateHeaderCheckboxStatus</a>
                             </li>
@@ -264,7 +270,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:31</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:65</a></div>
                             </td>
                         </tr>
 
@@ -320,9 +326,16 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:19</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:27</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Configuração da tabela, onde é definido de onde os dados serão buscados, se existirá a opção de
+redirecionamento, exclusão, etc...</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -346,9 +359,15 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:31</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Define se a tabela contará com a funcionalidade de pesquisa</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -380,14 +399,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="45"
-                            class="link-to-prism">src/app/shared/data-table/data-table.component.ts:45</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="87"
+                            class="link-to-prism">src/app/shared/data-table/data-table.component.ts:87</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Evento que é lançado toda vez que o checkbox de uma linha é marcado.</p>
+<p>elemento é enviado de volta, para que seja inserido no array &quot;checkedData&quot;.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -398,6 +420,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -412,6 +435,11 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Cada linha possui um elemento da propriedade &quot;data&quot; (presente no componente DataTable). Esse
+elemento é enviado de volta, para que seja inserido no array &quot;checkedData&quot;.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -449,14 +477,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="50"
-                            class="link-to-prism">src/app/shared/data-table/data-table.component.ts:50</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="96"
+                            class="link-to-prism">src/app/shared/data-table/data-table.component.ts:96</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Realiza um full text search nos dados presentes na propriedade &quot;data&quot; com base no valor do campo de pesquisa
+da tabela.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -467,6 +498,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -481,6 +513,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>É o valor do campo de pesquisa</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -518,14 +554,18 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="60"
-                            class="link-to-prism">src/app/shared/data-table/data-table.component.ts:60</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="110"
+                            class="link-to-prism">src/app/shared/data-table/data-table.component.ts:110</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Toda vez que o usuário clica no checkbox do cabeçalho duas ações podem ser tomadas:
+Caso todos os dados já estejam selecionados, todos as linhas terão o checkbox retirados. Caso
+nem todos os registros (ou nenhum) estejam selecionados, todos serão selecionados.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -555,14 +595,18 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="75"
-                            class="link-to-prism">src/app/shared/data-table/data-table.component.ts:75</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="130"
+                            class="link-to-prism">src/app/shared/data-table/data-table.component.ts:130</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Verifica se o checkbox de uma determinada linha deve estar checado ou não, baseado
+no dado que ela representa.
+para verificar se a linha deve ou não estar checada.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -573,6 +617,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -587,6 +632,11 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Dado, presente na propriedade &quot;data&quot;, que será procurado na propriedade &quot;checkedData&quot;,
+para verificar se a linha deve ou não estar checada.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -624,14 +674,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="79"
-                            class="link-to-prism">src/app/shared/data-table/data-table.component.ts:79</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="137"
+                            class="link-to-prism">src/app/shared/data-table/data-table.component.ts:137</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Chamada quando o usuário clica no botão com o label &quot;Carregar mais&quot;, verifica se existem mais dados
+e caso sim, os anexa a propriedade &quot;data&quot;.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -661,14 +714,18 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="98"
-                            class="link-to-prism">src/app/shared/data-table/data-table.component.ts:98</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="160"
+                            class="link-to-prism">src/app/shared/data-table/data-table.component.ts:160</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Função chamada pelo framework após a inicialização do componente. Neste caso, ela
+está sendo usada para verificar se o parâmetro &quot;dataTableConfiguration&quot; está sendo
+fornecido, e, caso sim, carrega os dados inicias na tabela.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -698,14 +755,18 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="112"
-                            class="link-to-prism">src/app/shared/data-table/data-table.component.ts:112</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="178"
+                            class="link-to-prism">src/app/shared/data-table/data-table.component.ts:178</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Função usada quando o usuário tenta excluir um registro. Ela faz isso através de uma
+chamada ao serviço &quot;DeleteModal&quot;, que fornece uma inscrição para ouvirmos a resposta
+da decisão da exclusão dos registros.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -735,14 +796,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="132"
-                            class="link-to-prism">src/app/shared/data-table/data-table.component.ts:132</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="203"
+                            class="link-to-prism">src/app/shared/data-table/data-table.component.ts:203</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Evento que é lançado toda vez que o checkbox de uma linha é desmarcado.</p>
+<p>elemento é enviado de volta, para que seja inserido removido do array &quot;checkedData&quot;</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -753,6 +817,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -767,75 +832,11 @@
                                     </td>
 
 
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="updateData"></a>
-                    <span class="name">
-                        <span ><b>updateData</b></span>
-                        <a href="#updateData"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>updateData(newData: literal type[])</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="140"
-                            class="link-to-prism">src/app/shared/data-table/data-table.component.ts:140</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>newData</td>
                                     <td>
-                                            <code>literal type[]</code>
+                                        <p>Cada linha possui um elemento da propriedade &quot;data&quot; (presente no componente DataTable). Esse
+elemento é enviado de volta, para que seja inserido removido do array &quot;checkedData&quot;</p>
+
                                     </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
                                 </tr>
                             </tbody>
                         </table>
@@ -875,14 +876,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="144"
-                            class="link-to-prism">src/app/shared/data-table/data-table.component.ts:144</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="214"
+                            class="link-to-prism">src/app/shared/data-table/data-table.component.ts:214</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>O checkbox do cabeçalho pode estar em três estados: desmarcado, indeterminado e marcado. Esta função atualiza
+o status baseando-se no número de linhas selecionadas.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -923,10 +927,17 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:22</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:36</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Após retornar os dados, é preciso dar a opção dos usuários carregarem as próximas informações.
+Essa propriedade marca quando é definido que não existem mais informações a serem carregadas.</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -955,10 +966,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:23</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:40</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Lista de todos os dados cujas linhas tiveram os checkboxes marcados</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -987,10 +1004,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:24</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:44</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Armazena os dados retornados através da função &quot;fetchData&quot; fornecida na configuração da tabela.</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -1014,10 +1037,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:48</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Dados filtrados da propriedade &quot;data&quot;, com base na informação inserida no campo de pesquisa.</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -1049,10 +1078,17 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:22</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Faz referencia ao checkbox presente na linha do cabeçalho do elemento &quot;table&quot;. Através dele
+o estado do checkbox é alterado para &quot;checked&quot;, &quot;indeterminate&quot; e não checado (checked = false).</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -1076,10 +1112,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:27</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:52</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Salva o útlimo registro retornado, para caso o usuário queira carregar novas informações;</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -1108,10 +1150,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:56</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Guarda o valor atual do campo de pesquisa, para filtrar novos dados caso o usuári clique em &quot;carregar mais&quot;</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -1140,10 +1188,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:29</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:60</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Seleciona os campos que serão considerados no full text search</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -1175,10 +1229,17 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:31</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:65</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Refererência a todos os componentes &quot;ResponsiveRowComponent&quot;, para controle das ações de &quot;check&quot;, exemplo:
+Toda vez que o checkbox do cabeçalho é marcado, todas as linhas devem ser marcadas ou desmarcadas.</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -1204,9 +1265,21 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:35</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/app/shared/data-table/data-table.component.ts:72</a></div>
                                 </td>
                             </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>As tabelas da aplicação utilizam &quot;display: grid&quot;, por conta disso, é preciso definir o tamanho de cada
+coluna. Essa proprieade retorna o valor dessa estilização baseando-se nas configurações da tabela.</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
 
             </tbody>
         </table>
@@ -1222,7 +1295,9 @@ import fullTextSearch from &#x27;../helpers/full-text-search.function&#x27;;
 import { ResponsiveRowComponent } from &#x27;../responsive-row/responsive-row.component&#x27;;
 import SimpleObject from &#x27;../helpers/simple-object.type&#x27;;
 /**
- * 
+ * Usado para exibir dados tabulares através de um array de objetos. Possui configurações para
+ * habilitar filtro (full text search), operações de exclusão e redirecionamento. Também ajuda
+ * a exibir os dados corretamentas quando a tabela se adapta a largura do dispositivo.
  */
 @Component({
     selector: &#x27;app-data-table&#x27;,
@@ -1230,25 +1305,60 @@ import SimpleObject from &#x27;../helpers/simple-object.type&#x27;;
     styleUrls: [&#x27;./data-table.component.css&#x27;]
 })
 export class DataTableComponent implements OnInit {
-
+    /**
+     * Faz referencia ao checkbox presente na linha do cabeçalho do elemento &quot;table&quot;. Através dele
+     * o estado do checkbox é alterado para &quot;checked&quot;, &quot;indeterminate&quot; e não checado (checked &#x3D; false).
+     */
     @ViewChild(&#x27;headerCheckbox&#x27;) headerCheckbox!: ElementRef;
-
+    /**
+     * Configuração da tabela, onde é definido de onde os dados serão buscados, se existirá a opção de
+     * redirecionamento, exclusão, etc...
+     */
     @Input() dataTableConfiguration!: DataTableConfiguration&lt;any&gt;;
+    /**
+     * Define se a tabela contará com a funcionalidade de pesquisa
+     */
     @Input() enableSearch: boolean &#x3D; false;
-
+    /**
+     * Após retornar os dados, é preciso dar a opção dos usuários carregarem as próximas informações.
+     * Essa propriedade marca quando é definido que não existem mais informações a serem carregadas.
+     */
     public canLoadMore: boolean &#x3D; false;
+    /**
+     * Lista de todos os dados cujas linhas tiveram os checkboxes marcados
+     */
     public checkedData: SimpleObject[] &#x3D; [];
+    /**
+     * Armazena os dados retornados através da função &quot;fetchData&quot; fornecida na configuração da tabela.
+     */
     public data: SimpleObject[] &#x3D; [];
+    /**
+     * Dados filtrados da propriedade &quot;data&quot;, com base na informação inserida no campo de pesquisa.
+     */
     public filteredData: SimpleObject[] | undefined;
-
+    /**
+     * Salva o útlimo registro retornado, para caso o usuário queira carregar novas informações;
+     */
     private lastRegister: any;
+    /**
+     * Guarda o valor atual do campo de pesquisa, para filtrar novos dados caso o usuári clique em &quot;carregar mais&quot;
+     */
     private lastSearchTerm: string &#x3D; &quot;&quot;;
+    /**
+     * Seleciona os campos que serão considerados no full text search
+     */
     private propertiesToFilter: string[] &#x3D; [];
-
+    /**
+     * Refererência a todos os componentes &quot;ResponsiveRowComponent&quot;, para controle das ações de &quot;check&quot;, exemplo:
+     * Toda vez que o checkbox do cabeçalho é marcado, todas as linhas devem ser marcadas ou desmarcadas.
+     */
     @ViewChildren(ResponsiveRowComponent) responsiveRowComponentViewChildrenRef: QueryList&lt;ResponsiveRowComponent&gt; | undefined;
 
     constructor(private deleteModalService: DeleteModalService) { }
-    
+    /**
+     * As tabelas da aplicação utilizam &quot;display: grid&quot;, por conta disso, é preciso definir o tamanho de cada
+     * coluna. Essa proprieade retorna o valor dessa estilização baseando-se nas configurações da tabela.
+     */
     get gridColumns(): string {
         let style: string &#x3D; this.dataTableConfiguration.deleteDataFn ? &quot;auto &quot; : &quot;&quot;;
 
@@ -1258,12 +1368,21 @@ export class DataTableComponent implements OnInit {
 
         return this.dataTableConfiguration.redirectLinkFn ? &#x60;${style}auto&#x60; : style
     }
-
+    /**
+     * Evento que é lançado toda vez que o checkbox de uma linha é marcado.
+     * 
+     * @param data Cada linha possui um elemento da propriedade &quot;data&quot; (presente no componente DataTable). Esse
+     * elemento é enviado de volta, para que seja inserido no array &quot;checkedData&quot;.
+     */
     checkEvent(data: any): void {
         this.checkedData.push(data);
         this.updateHeaderCheckboxStatus();
     }
-
+    /**
+     * Realiza um full text search nos dados presentes na propriedade &quot;data&quot; com base no valor do campo de pesquisa 
+     * da tabela.
+     * @param searchTerm É o valor do campo de pesquisa
+     */
     filterData(searchTerm: string): void {
         if(searchTerm &#x3D;&#x3D;&#x3D; &quot;&quot;) {
             this.filteredData &#x3D; undefined;
@@ -1273,7 +1392,11 @@ export class DataTableComponent implements OnInit {
         this.lastSearchTerm &#x3D; searchTerm;
         this.filteredData &#x3D; fullTextSearch(this.lastSearchTerm, this.data, this.propertiesToFilter);
     }
-
+    /**
+     * Toda vez que o usuário clica no checkbox do cabeçalho duas ações podem ser tomadas:
+     * Caso todos os dados já estejam selecionados, todos as linhas terão o checkbox retirados. Caso
+     * nem todos os registros (ou nenhum) estejam selecionados, todos serão selecionados.
+     */
     headerCheckboxClick(): void {
         if(!this.responsiveRowComponentViewChildrenRef) return
 
@@ -1288,11 +1411,19 @@ export class DataTableComponent implements OnInit {
         }
 
     }
-
+    /**
+     * Verifica se o checkbox de uma determinada linha deve estar checado ou não, baseado
+     * no dado que ela representa.
+     * @param data Dado, presente na propriedade &quot;data&quot;, que será procurado na propriedade &quot;checkedData&quot;,
+     * para verificar se a linha deve ou não estar checada.
+     */
     isChecked(data: SimpleObject): boolean {
         return this.checkedData.find(x &#x3D;&gt; x &#x3D;&#x3D;&#x3D; data) ? true : false;
     }
-
+    /**
+     * Chamada quando o usuário clica no botão com o label &quot;Carregar mais&quot;, verifica se existem mais dados
+     * e caso sim, os anexa a propriedade &quot;data&quot;.
+     */
     loadMore(): void {
         const newData &#x3D; this.dataTableConfiguration.fetchData(
             this.dataTableConfiguration.registersPerPage,
@@ -1311,7 +1442,11 @@ export class DataTableComponent implements OnInit {
             this.filterData(this.lastSearchTerm);
         }
     }
-
+    /**
+     * Função chamada pelo framework após a inicialização do componente. Neste caso, ela
+     * está sendo usada para verificar se o parâmetro &quot;dataTableConfiguration&quot; está sendo
+     * fornecido, e, caso sim, carrega os dados inicias na tabela.
+     */
     ngOnInit(): void {
         if(!this.dataTableConfiguration) {
             console.error(&quot;Necessário fornecer o parâmetro &#x27;DataTableConfiguration&#x27;&quot;)
@@ -1325,7 +1460,11 @@ export class DataTableComponent implements OnInit {
             })
         }
     }
-
+    /**
+     * Função usada quando o usuário tenta excluir um registro. Ela faz isso através de uma 
+     * chamada ao serviço &quot;DeleteModal&quot;, que fornece uma inscrição para ouvirmos a resposta
+     * da decisão da exclusão dos registros. 
+     */
     showDeleteModal(): void {
         this.deleteModalService.showModal &#x3D; true;
         const subscription &#x3D; this.deleteModalService.subscribeToAction.subscribe(x &#x3D;&gt; {
@@ -1345,7 +1484,12 @@ export class DataTableComponent implements OnInit {
             subscription.unsubscribe();
         })
     }
-
+    /**
+     * Evento que é lançado toda vez que o checkbox de uma linha é desmarcado.
+     * 
+     * @param data Cada linha possui um elemento da propriedade &quot;data&quot; (presente no componente DataTable). Esse
+     * elemento é enviado de volta, para que seja inserido removido do array &quot;checkedData&quot;
+     */
     uncheckEvent(data: any): void {
         const uncheckIndex: number &#x3D; this.checkedData.findIndex(x &#x3D;&gt; x &#x3D;&#x3D;&#x3D; data);
         if(uncheckIndex &#x3D;&#x3D;&#x3D; -1) return;
@@ -1353,16 +1497,14 @@ export class DataTableComponent implements OnInit {
         this.checkedData.splice(uncheckIndex, 1);
         this.updateHeaderCheckboxStatus();
     }
-
-    updateData(newData: {[key: string]: any}[]) {
-        this.data &#x3D; newData;
-    }
-
+    /**
+     * O checkbox do cabeçalho pode estar em três estados: desmarcado, indeterminado e marcado. Esta função atualiza
+     * o status baseando-se no número de linhas selecionadas.
+     */
     private updateHeaderCheckboxStatus(): void {
         this.headerCheckbox.nativeElement.checked &#x3D; this.checkedData.length &#x3D;&#x3D;&#x3D; this.data.length &amp;&amp; this.data.length &gt; 0;
         this.headerCheckbox.nativeElement.indeterminate &#x3D; this.checkedData.length &gt; 0 &amp;&amp; this.checkedData.length &lt; this.data.length;
     }
-
 }
 </code></pre>
     </div>

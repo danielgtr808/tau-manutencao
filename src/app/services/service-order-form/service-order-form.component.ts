@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Subscriber, Subscription } from 'rxjs';
 import Employee from 'src/app/backend/models/employees/employee.model';
 import { EmployeeService } from 'src/app/backend/models/employees/employee.service';
 import ServiceOrder from 'src/app/backend/models/service-order/service-order.model';
@@ -18,7 +19,7 @@ import { TypedFormBuilderService } from 'src/app/shared/typed-form-builder.servi
     templateUrl: './service-order-form.component.html',
     styleUrls: ['./service-order-form.component.css']
 })
-export class ServiceOrderFormComponent {
+export class ServiceOrderFormComponent implements OnDestroy, OnInit {
 
     public serviceOrderForm = this.typedFormBuilder.group(
         { } as ServiceOrder,
@@ -53,6 +54,7 @@ export class ServiceOrderFormComponent {
 
     private _showReprovationReasonField: boolean = false;
     private _showConclusionFieldsReasonField: boolean = false;
+    private _statusChangeSubscription: Subscription | undefined;
 
     constructor(
         private activatedRoute: ActivatedRoute,
@@ -101,6 +103,17 @@ export class ServiceOrderFormComponent {
         ];
     }
 
+    ngOnDestroy(): void {
+        this._statusChangeSubscription?.unsubscribe();
+    }
+
+    ngOnInit(): void {
+        this._statusChangeSubscription = this.serviceOrderForm.controls.status.valueChanges.subscribe(value => {
+            this._showReprovationReasonField = (value === "Reprovada");
+            this._showConclusionFieldsReasonField = (value === "Aprovada");
+        })
+    }
+
     get createCallback() {
         return (model: ServiceOrder) => {
             return { result: undefined, success: true } as Result<undefined, string>
@@ -121,11 +134,6 @@ export class ServiceOrderFormComponent {
 
     private returnToDataPage(): void {
         this.router.navigateByUrl('/services/service-order');
-    }
-
-    onStatusChange(value: any): void {
-        this._showReprovationReasonField = (value === "Reprovada");
-        this._showConclusionFieldsReasonField = (value === "Aprovada");
     }
 
     get statusRadioButton(): RadioButtonOption[] {

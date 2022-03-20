@@ -68,6 +68,13 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Menu exibido na versão mobile do layout, serve como versão minimizada do menu lateral.</p>
+
+    </p>
 
 
 
@@ -158,24 +165,6 @@
     </table>
 </section>
 
-    <section>
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor()</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/shared/top-menu/top-menu.component.ts:10</a></div>
-                            </td>
-                        </tr>
-
-            </tbody>
-        </table>
-</section>
 
 
 
@@ -206,14 +195,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="14"
-                            class="link-to-prism">src/app/shared/top-menu/top-menu.component.ts:14</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="18"
+                            class="link-to-prism">src/app/shared/top-menu/top-menu.component.ts:18</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Resultado da emissão do evento &quot;closeAction&quot; do menu lateral (<a href="../components/SideMenuComponent.html">SideMenuComponent</a>)</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -254,10 +245,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/shared/top-menu/top-menu.component.ts:10</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/shared/top-menu/top-menu.component.ts:14</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Determina se o side menu (<a href="../components/SideMenuComponent.html">SideMenuComponent</a>) deve ser exibido ou não</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -268,18 +265,22 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
-
+/**
+ * Menu exibido na versão mobile do layout, serve como versão minimizada do menu lateral.
+ */
 @Component({
     selector: &#x27;app-top-menu&#x27;,
     templateUrl: &#x27;./top-menu.component.html&#x27;,
     styleUrls: [&#x27;./top-menu.component.css&#x27;]
 })
 export class TopMenuComponent {
-
+    /**
+     * Determina se o side menu ({@link SideMenuComponent}) deve ser exibido ou não
+     */
     public showSideMenu: boolean &#x3D; false;
-
-    constructor() { }
-
+    /**
+     * Resultado da emissão do evento &quot;closeAction&quot; do menu lateral ({@link SideMenuComponent})
+     */
     hideSidemenu() {
         this.showSideMenu &#x3D; false;
     }

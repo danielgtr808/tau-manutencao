@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { FormGroup, ValidatorFn } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import Machine from 'src/app/backend/models/machines/machine.model';
 import { MachineService } from 'src/app/backend/models/machines/machine.service';
 import Sector from 'src/app/backend/models/sectors/sector.model';
@@ -87,6 +88,7 @@ export class ServiceSolicitationFormComponent {
     private _showOsTypeField: boolean = false;
     private _showDescriptionField: boolean = false;
     private _showReprovationReasonField: boolean = false;
+    private _statusChangeSubscription: Subscription | undefined;
 
     constructor(
         private activatedRoute: ActivatedRoute,
@@ -114,6 +116,16 @@ export class ServiceSolicitationFormComponent {
 
     get updateCallback() {
         return this.serviceSolicitationService.update.bind(this.serviceSolicitationService)
+    }
+
+    ngOnDestroy(): void {
+        this._statusChangeSubscription?.unsubscribe();
+    }
+
+    ngOnInit(): void {
+        this._statusChangeSubscription = this.serviceSolicitationForm.controls.status.valueChanges.subscribe(value => {
+            this._showReprovationReasonField = (value === "Reprovada");
+        })
     }
 
     onMachineNameChange(target: EventTarget): void {
@@ -200,10 +212,6 @@ export class ServiceSolicitationFormComponent {
         }
 
         return options;
-    }
-
-    onStatusChange(value: any): void {
-        this._showReprovationReasonField = (value === "Reprovada");
     }
 
     get showReprovationReasonField(): boolean {
