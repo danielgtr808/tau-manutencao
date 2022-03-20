@@ -1,0 +1,1394 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>tau-manutencao documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">tau-manutencao documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  SelectAnswerFieldComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/shared/select-answer-field/select-answer-field.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Usado em formulários para criação de registros no lugar do elemento &quot;select&quot;</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/forms/ControlValueAccessor" target="_blank" >ControlValueAccessor</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../components/SelectAnswerFieldComponent.html" target="_self" >{
+    provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() &#x3D;&gt; SelectAnswerFieldComponent), multi: true
+}</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-select-answer-field</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./select-answer-field.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./select-answer-field.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_onChangeFn" >_onChangeFn</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_onTouchedFn" >_onTouchedFn</a>
+                            </li>
+                            <li>
+                                <a href="#onFocus" >onFocus</a>
+                            </li>
+                            <li>
+                                <a href="#value" >value</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#onChange" >onChange</a>
+                            </li>
+                            <li>
+                                <a href="#onTouched" >onTouched</a>
+                            </li>
+                            <li>
+                                <a href="#registerOnChange" >registerOnChange</a>
+                            </li>
+                            <li>
+                                <a href="#registerOnTouched" >registerOnTouched</a>
+                            </li>
+                            <li>
+                                <a href="#writeValue" >writeValue</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#abstractControl" >abstractControl</a>
+                            </li>
+                            <li>
+                                <a href="#helperText" >helperText</a>
+                            </li>
+                            <li>
+                                <a href="#label" >label</a>
+                            </li>
+                            <li>
+                                <a href="#readOnly" >readOnly</a>
+                            </li>
+                            <li>
+                                <a href="#selectAnswerConfiguration" >selectAnswerConfiguration</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#firstChange" >firstChange</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#error" >error</a>
+                                </li>
+                                <li>
+                                    <a href="#displayValue" >displayValue</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/shared/select-answer-field/select-answer-field.component.ts:70</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="abstractControl"></a>
+                        <b>abstractControl</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>AbstractControl | undefined</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/shared/select-answer-field/select-answer-field.component.ts:25</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Utilizado para acessar os erros associados a este campo. Através deste parâmetro,
+o campo também é marcado como &quot;dirty&quot; quando o evento &quot;input&quot; é emitido e como
+&quot;touched&quot; na emição do evento &quot;blur&quot;.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="helperText"></a>
+                        <b>helperText</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/shared/select-answer-field/select-answer-field.component.ts:31</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Texto para auxiliar o usuário a preencher o campo (como em caso de campos de telefone,
+onde pode-se orientar o usuário a colocar o ddd ou não, por exemplo) ou para apresentar
+uma mensagem relevante ao usuário (como por exemplo: Este campo não poderá ser editado).</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="label"></a>
+                        <b>label</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/shared/select-answer-field/select-answer-field.component.ts:35</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>É o label que será associado ao campo.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="readOnly"></a>
+                        <b>readOnly</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/shared/select-answer-field/select-answer-field.component.ts:39</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Determinar se o campo será somente leitura</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectAnswerConfiguration"></a>
+                        <b>selectAnswerConfiguration</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#SelectAnswerConfiguration" target="_self" >SelectAnswerConfiguration&lt;any&gt; | undefined</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/shared/select-answer-field/select-answer-field.component.ts:43</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Para saber sobre a utilização dessa propriedade, consulte a documentação do <a href="../miscellaneous/typealiases.html#SelectAnswerConfiguration">SelectAnswerConfiguration</a></p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="firstChange"></a>
+                        <b>firstChange</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/shared/select-answer-field/select-answer-field.component.ts:59</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>No reactiveForms, é possível ouvir por mudanças nos valores nos elementos de um formulário, entretanto
+quando um select ja começa de um valor, isso não é considerado uma mudança, e o não ocorre a notificação.
+Caso alguma lógica seja executada após o valor do select deixar de ser nulo, basta escutar por este
+evento ao inicializar o formulário para corrigir esse comportamento.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onChange"></a>
+                    <span class="name">
+                        <span ><b>onChange</b></span>
+                        <a href="#onChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onChange(event: <a href="https://angular.io/api/router/Event" target="_blank">Event</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="111"
+                            class="link-to-prism">src/app/shared/select-answer-field/select-answer-field.component.ts:111</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Função usada para informar um formGroup que o estado do campo foi alterado para &quot;dirty&quot; e
+informar algum listener que o valor do campo mudou.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/router/Event" target="_blank" >Event</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onTouched"></a>
+                    <span class="name">
+                        <span ><b>onTouched</b></span>
+                        <a href="#onTouched"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onTouched()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="120"
+                            class="link-to-prism">src/app/shared/select-answer-field/select-answer-field.component.ts:120</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Função usada para informar um formGroup que o estado do campo foi alterado para &quot;touched&quot;</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registerOnChange"></a>
+                    <span class="name">
+                        <span ><b>registerOnChange</b></span>
+                        <a href="#registerOnChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>registerOnChange(fn: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="127"
+                            class="link-to-prism">src/app/shared/select-answer-field/select-answer-field.component.ts:127</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Função necessária para a implementação da interface &quot;ControlValueAcessor&quot;</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fn</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registerOnTouched"></a>
+                    <span class="name">
+                        <span ><b>registerOnTouched</b></span>
+                        <a href="#registerOnTouched"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>registerOnTouched(fn: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="133"
+                            class="link-to-prism">src/app/shared/select-answer-field/select-answer-field.component.ts:133</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Função necessária para a implementação da interface &quot;ControlValueAcessor&quot;</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fn</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="writeValue"></a>
+                    <span class="name">
+                        <span ><b>writeValue</b></span>
+                        <a href="#writeValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>writeValue(obj: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="141"
+                            class="link-to-prism">src/app/shared/select-answer-field/select-answer-field.component.ts:141</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Função necessária para a implementação da interface &quot;ControlValueAcessor&quot;, existe um
+adicional da emissão do evento &quot;firstChange&quot;. Para entender, basta ler a descrição do
+evento &quot;firstChange&quot;</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>obj</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_onChangeFn"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_onChangeFn</b></span>
+                        <a href="#_onChangeFn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any | undefined</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/shared/select-answer-field/select-answer-field.component.ts:64</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Propriedade usada na implementação da interface &quot;ControlValueAcessor&quot;. Ela é chamada
+toda vez que o evento &quot;input&quot; é emitido, desde que o campo esteja dentro de um formulário</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_onTouchedFn"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_onTouchedFn</b></span>
+                        <a href="#_onTouchedFn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any | undefined</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/shared/select-answer-field/select-answer-field.component.ts:70</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Propriedade usada na implementação da interface &quot;ControlValueAcessor&quot;. Ela é chamada
+toda vez que os eventos &quot;blur&quot; e &quot;focus&quot; são emitido, desde que o campo esteja dentro
+de um formulário</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onFocus"></a>
+                    <span class="name">
+                        <span ><b>onFocus</b></span>
+                        <a href="#onFocus"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/shared/select-answer-field/select-answer-field.component.ts:48</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Propriedade usada para saber quando aplicar a classe &quot;on-focus&quot;, que altera a cor do label e da borda
+do campo</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="value"></a>
+                    <span class="name">
+                        <span ><b>value</b></span>
+                        <a href="#value"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/shared/select-answer-field/select-answer-field.component.ts:52</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Propriedade para fazer two-way data binding com o elemento input do componente.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="error"></a>
+                        <span class="name"><b>error</b><a href="#error"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>error()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/app/shared/select-answer-field/select-answer-field.component.ts:77</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Caso o parâmetro de entrada &quot;abstractControl&quot; tenha sido fornecido, e o campo esteja no
+estado &quot;touched&quot;, retorna a primeira mensagem de erro associada ao &quot;abstractControl&quot;.</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayValue"></a>
+                        <span class="name"><b>displayValue</b><a href="#displayValue"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>displayValue()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="94" class="link-to-prism">src/app/shared/select-answer-field/select-answer-field.component.ts:94</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Em um select, pode existir uma diferença entre o que é exibido e o valor que a opção representa, através dessa
+propriedade, é possível obter o valor exibido para ser usado fora de um select (quando o campo é somente leitura,
+o valor é exibido em um span)</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, EventEmitter, forwardRef, Input, Output } from &#x27;@angular/core&#x27;;
+import { AbstractControl, ControlValueAccessor, NG_VALUE_ACCESSOR } from &#x27;@angular/forms&#x27;;
+import SelectAnswerConfiguration from &#x27;./select-answer-configuration.type&#x27;;
+/**
+ * Usado em formulários para criação de registros no lugar do elemento &quot;select&quot;
+ */
+@Component({
+    selector: &#x27;app-select-answer-field&#x27;,
+    templateUrl: &#x27;./select-answer-field.component.html&#x27;,
+    styleUrls: [&#x27;./select-answer-field.component.css&#x27;],
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR, 
+            useExisting: forwardRef(() &#x3D;&gt; SelectAnswerFieldComponent),
+            multi: true     
+        }
+    ]
+})
+export class SelectAnswerFieldComponent implements ControlValueAccessor {
+    /**
+     * Utilizado para acessar os erros associados a este campo. Através deste parâmetro, 
+     * o campo também é marcado como &quot;dirty&quot; quando o evento &quot;input&quot; é emitido e como
+     * &quot;touched&quot; na emição do evento &quot;blur&quot;.
+     */
+    @Input() abstractControl: AbstractControl | undefined;
+    /**
+     * Texto para auxiliar o usuário a preencher o campo (como em caso de campos de telefone,
+     * onde pode-se orientar o usuário a colocar o ddd ou não, por exemplo) ou para apresentar
+     * uma mensagem relevante ao usuário (como por exemplo: Este campo não poderá ser editado).
+     */
+    @Input() helperText: string &#x3D; &quot;&quot;;
+    /**
+      * É o label que será associado ao campo.
+      */
+    @Input() label: string &#x3D; &quot;&quot;;
+    /**
+     * Determinar se o campo será somente leitura
+     */
+    @Input() readOnly: boolean &#x3D; false;
+    /**
+     * Para saber sobre a utilização dessa propriedade, consulte a documentação do {@link SelectAnswerConfiguration}
+     */
+    @Input() selectAnswerConfiguration: SelectAnswerConfiguration&lt;any&gt; | undefined
+    /**
+     * Propriedade usada para saber quando aplicar a classe &quot;on-focus&quot;, que altera a cor do label e da borda
+     * do campo
+     */
+    onFocus: boolean &#x3D; false;
+    /**
+     * Propriedade para fazer two-way data binding com o elemento input do componente.
+     */
+    value: string &#x3D; &quot;&quot;;
+    /**
+     * No reactiveForms, é possível ouvir por mudanças nos valores nos elementos de um formulário, entretanto
+     * quando um select ja começa de um valor, isso não é considerado uma mudança, e o não ocorre a notificação.
+     * Caso alguma lógica seja executada após o valor do select deixar de ser nulo, basta escutar por este
+     * evento ao inicializar o formulário para corrigir esse comportamento.
+     */
+    @Output() firstChange &#x3D; new EventEmitter();
+    /**
+     * Propriedade usada na implementação da interface &quot;ControlValueAcessor&quot;. Ela é chamada
+     * toda vez que o evento &quot;input&quot; é emitido, desde que o campo esteja dentro de um formulário
+     */
+    private _onChangeFn: any | undefined;
+    /**
+     * Propriedade usada na implementação da interface &quot;ControlValueAcessor&quot;. Ela é chamada
+     * toda vez que os eventos &quot;blur&quot; e &quot;focus&quot; são emitido, desde que o campo esteja dentro
+     * de um formulário
+     */
+    private _onTouchedFn: any | undefined;
+
+    constructor() { }
+    /**
+     * Caso o parâmetro de entrada &quot;abstractControl&quot; tenha sido fornecido, e o campo esteja no
+     * estado &quot;touched&quot;, retorna a primeira mensagem de erro associada ao &quot;abstractControl&quot;.
+     */
+     get error(): string {
+        if(!this.abstractControl) return &quot;&quot;
+        if(this.abstractControl.untouched) return &quot;&quot;
+
+        let errorMessage: string &#x3D; &quot;&quot;;
+        for(const errorCode in this.abstractControl.errors) {
+            errorMessage &#x3D; this.abstractControl.errors[errorCode];
+            break;
+        }
+
+        return errorMessage;
+    }
+    /**
+     * Em um select, pode existir uma diferença entre o que é exibido e o valor que a opção representa, através dessa
+     * propriedade, é possível obter o valor exibido para ser usado fora de um select (quando o campo é somente leitura,
+     * o valor é exibido em um span)
+     */
+    get displayValue(): any {
+        if(!this.selectAnswerConfiguration) {
+            return &quot;&quot;;
+        }
+
+        for(let obj of this.selectAnswerConfiguration.data) {
+            if(obj[this.selectAnswerConfiguration.idProperty] &#x3D;&#x3D;&#x3D; this.value) {
+                return obj[this.selectAnswerConfiguration.valueProperty];
+            }
+        }
+
+        return &quot;&quot;;
+    }
+    /**
+     * Função usada para informar um formGroup que o estado do campo foi alterado para &quot;dirty&quot; e
+     * informar algum listener que o valor do campo mudou.
+     */
+    onChange(event: Event): void {
+        const selectValue &#x3D; (event.target as HTMLSelectElement).value
+
+        if(!this._onChangeFn) return;
+        this._onChangeFn(selectValue);
+    }
+    /**
+     * Função usada para informar um formGroup que o estado do campo foi alterado para &quot;touched&quot;
+     */
+    onTouched(): void {
+        if(!this._onTouchedFn) return;
+        this._onTouchedFn();
+    }
+    /**
+     * Função necessária para a implementação da interface &quot;ControlValueAcessor&quot;
+     */
+    registerOnChange(fn: any): void {
+        this._onChangeFn &#x3D; fn;
+    }
+    /**
+     * Função necessária para a implementação da interface &quot;ControlValueAcessor&quot;
+     */
+    registerOnTouched(fn: any): void {
+        this._onTouchedFn &#x3D; fn;
+    }
+    /**
+     * Função necessária para a implementação da interface &quot;ControlValueAcessor&quot;, existe um 
+     * adicional da emissão do evento &quot;firstChange&quot;. Para entender, basta ler a descrição do
+     * evento &quot;firstChange&quot;
+     */
+    writeValue(obj: any): void {
+        this.value &#x3D; obj;
+        this.firstChange.emit({
+            target: {
+                value: this.value
+            }
+        } as unknown as Event);
+    }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;span class&#x3D;&quot;crud-form-label&quot;&gt;
+    {{this.label}}
+    &lt;br&gt;
+    &lt;span class&#x3D;&quot;helper-text&quot;&gt;{{this.helperText}}&lt;/span&gt;
+&lt;/span&gt;
+&lt;div
+    class&#x3D;&quot;form-group&quot;
+    [ngClass]&#x3D;&quot;{ &#x27;error&#x27;: this.error !&#x3D;&#x3D; &#x27;&#x27;}&quot;
+    *ngIf&#x3D;&quot;this.selectAnswerConfiguration&quot;
+&gt;
+    &lt;select
+        (blur)&#x3D;&quot;this.onTouched()&quot;
+        (focus)&#x3D;&quot;this.onTouched()&quot;
+        (change)&#x3D;&quot;this.onChange($event)&quot;
+        *ngIf&#x3D;&quot;!this.readOnly&quot;
+        [(ngModel)]&#x3D;&quot;this.value&quot;
+    &gt;
+        &lt;option style&#x3D;&quot;display: none;&quot; value&#x3D;&quot;&quot;&gt;&lt;/option&gt;
+        &lt;option
+            *ngFor&#x3D;&quot;let data of this.selectAnswerConfiguration.data&quot;
+            [attr.value]&#x3D;&quot;data[this.selectAnswerConfiguration.idProperty]&quot;
+            [ngStyle]&#x3D;&quot;{ &#x27;display&#x27;: data[this.selectAnswerConfiguration.determineDisplayProperty] &#x3D;&#x3D;&#x3D; false ? &#x27;none&#x27; : &#x27;block&#x27; }&quot;
+        &gt;
+            {{data[this.selectAnswerConfiguration.valueProperty]}}
+        &lt;/option&gt;
+    &lt;/select&gt;
+    &lt;span class&#x3D;&quot;read-only-field&quot; *ngIf&#x3D;&quot;this.readOnly&quot;&gt;{{this.displayValue}}&lt;/span&gt;
+    &lt;span class&#x3D;&quot;error-message&quot;&gt;{{this.error}}&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./select-answer-field.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">:host {
+    background-color: var(--color-background-10);
+    border-radius: 8px;
+    box-shadow: 0px 7px 29px rgba(100, 100, 111, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 24px 24px 32px 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+select {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    max-width: 296px;
+    outline: none;
+    padding-bottom: 4px;
+    width: 100%;
+}
+
+select:focus {
+    border-color: var(--color-primary-10);
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.read-only-field {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+.helper-text {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.error-message {
+    color: var(--color-input-error);
+    display: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.form-group.error &gt; input {
+    border-color: var(--color-input-error);
+    color: var(--color-input-error);
+}
+
+.form-group.error &gt; .error-message {
+    display: block;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><span class="crud-form-label">    {{this.label}}    <br>    <span class="helper-text">{{this.helperText}}</span></span><div    class="form-group"    [ngClass]="{ \'error\': this.error !== \'\'}"    *ngIf="this.selectAnswerConfiguration">    <select        (blur)="this.onTouched()"        (focus)="this.onTouched()"        (change)="this.onChange($event)"        *ngIf="!this.readOnly"        [(ngModel)]="this.value"    >        <option style="display: none;" value=""></option>        <option            *ngFor="let data of this.selectAnswerConfiguration.data"            [attr.value]="data[this.selectAnswerConfiguration.idProperty]"            [ngStyle]="{ \'display\': data[this.selectAnswerConfiguration.determineDisplayProperty] === false ? \'none\' : \'block\' }"        >            {{data[this.selectAnswerConfiguration.valueProperty]}}        </option>    </select>    <span class="read-only-field" *ngIf="this.readOnly">{{this.displayValue}}</span>    <span class="error-message">{{this.error}}</span></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BorderedInputComponent', 'selector': 'app-bordered-input'},{'name': 'CausesDataComponent', 'selector': 'app-causes-data'},{'name': 'CausesFormComponent', 'selector': 'app-causes-form'},{'name': 'ContentContainerComponent', 'selector': 'app-content-container'},{'name': 'ContentTopMenuComponent', 'selector': 'app-content-top-menu'},{'name': 'CrudTableComponent', 'selector': 'app-crud-table'},{'name': 'DashboardPageComponent', 'selector': 'app-dashboard-page'},{'name': 'DataTableComponent', 'selector': 'app-data-table'},{'name': 'DefaultDataPageComponent', 'selector': 'app-default-data-page'},{'name': 'DefaultFormPageComponent', 'selector': 'app-default-form-page'},{'name': 'DefaultPageComponent', 'selector': 'app-default-page'},{'name': 'DefectsDataComponent', 'selector': 'app-defects-data'},{'name': 'DefectsFormComponent', 'selector': 'app-defects-form'},{'name': 'DeleteModalComponent', 'selector': 'app-delete-modal'},{'name': 'DepartmentDataComponent', 'selector': 'app-department-data'},{'name': 'DepartmentFormComponent', 'selector': 'app-department-form'},{'name': 'EmployeesDataComponent', 'selector': 'app-employees-data'},{'name': 'EmployeesFormComponent', 'selector': 'app-employees-form'},{'name': 'EquipmentsDataComponent', 'selector': 'app-equipments-data'},{'name': 'EquipmentsFormComponent', 'selector': 'app-equipments-form'},{'name': 'ErrorMessageComponent', 'selector': 'app-error-message'},{'name': 'LoginPageComponent', 'selector': 'app-login-page'},{'name': 'LogoComponent', 'selector': 'app-logo'},{'name': 'LongAnswerFieldComponent', 'selector': 'app-long-answer-field'},{'name': 'MachineFamiliesDataComponent', 'selector': 'app-machine-families-data'},{'name': 'MachineFamiliesFormComponent', 'selector': 'app-machine-families-form'},{'name': 'MachinesDataComponent', 'selector': 'app-machines-data'},{'name': 'MachinesFormComponent', 'selector': 'app-machines-form'},{'name': 'RadioButtonAnswerFieldComponent', 'selector': 'app-radio-button-answer-field'},{'name': 'ResponsiveRowComponent', 'selector': 'app-responsive-row'},{'name': 'SectorDataComponent', 'selector': 'app-sector-data'},{'name': 'SectorFormComponent', 'selector': 'app-sector-form'},{'name': 'SelectAnswerFieldComponent', 'selector': 'app-select-answer-field'},{'name': 'ServiceOrderDataComponent', 'selector': 'app-service-order-data'},{'name': 'ServiceOrderFormComponent', 'selector': 'app-service-order-form'},{'name': 'ServiceSolicitationDataComponent', 'selector': 'app-service-solicitation-data'},{'name': 'ServiceSolicitationFormComponent', 'selector': 'app-service-solicitation-form'},{'name': 'ShortAnswerFieldComponent', 'selector': 'app-short-answer-field'},{'name': 'SideMenuComponent', 'selector': 'app-side-menu'},{'name': 'SideMenuItemComponent', 'selector': 'app-side-menu-item'},{'name': 'SolutionsDataComponent', 'selector': 'app-solutions-data'},{'name': 'SolutionsFormComponent', 'selector': 'app-solutions-form'},{'name': 'SsOsIndicatorComponent', 'selector': 'app-ss-os-indicator'},{'name': 'SummaryContainerComponent', 'selector': 'app-summary-container'},{'name': 'SymptomsDataComponent', 'selector': 'app-symptoms-data'},{'name': 'SymptomsFormComponent', 'selector': 'app-symptoms-form'},{'name': 'TagsDataComponent', 'selector': 'app-tags-data'},{'name': 'TagsFormComponent', 'selector': 'app-tags-form'},{'name': 'TopMenuComponent', 'selector': 'app-top-menu'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'SelectAnswerFieldComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SelectAnswerFieldComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

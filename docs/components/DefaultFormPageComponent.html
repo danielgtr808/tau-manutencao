@@ -1,0 +1,1147 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>tau-manutencao documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">tau-manutencao documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  DefaultFormPageComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/shared/default-form-page/default-form-page.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Utilizado para facilitar a criação de páginas de formulários (criação e edição de registros). Para utilizar
+esse componente, utilize elementos de formulário (input, select, textarea...) ou componentes que implementem
+a interface ControValueAcessor. Exemplo:
+<app-default-form-page>
+     <input formControlName="example" />
+     &lt;select formControlName-&quot;example2&quot; &gt;&lt;option...</select>
+</app-default-form-page></p>
+<p>O componente faz uso de reactive forms, portanto, é importante que todos os elementos inseridos dentro de
+&quot;app-default-form-page&quot; tenham o atributo &quot;formControlName&quot;</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-default-form-page</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./default-form-page.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./default-form-page.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_idParam" >_idParam</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_pageTitle" >_pageTitle</a>
+                            </li>
+                            <li>
+                                <a href="#errorMessageComponent" >errorMessageComponent</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#saveChanges" >saveChanges</a>
+                            </li>
+                            <li>
+                                <a href="#showErrorMessage" >showErrorMessage</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cancelUrl" >cancelUrl</a>
+                            </li>
+                            <li>
+                                <a href="#createCallback" >createCallback</a>
+                            </li>
+                            <li>
+                                <a href="#createPageTitle" >createPageTitle</a>
+                            </li>
+                            <li>
+                                <a href="#formGroup" >formGroup</a>
+                            </li>
+                            <li>
+                                <a href="#readFromIdCallback" >readFromIdCallback</a>
+                            </li>
+                            <li>
+                                <a href="#saveUrl" >saveUrl</a>
+                            </li>
+                            <li>
+                                <a href="#updateCallback" >updateCallback</a>
+                            </li>
+                            <li>
+                                <a href="#updatePageTitle" >updatePageTitle</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#pageTitle" >pageTitle</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(activatedRoute: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:75</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>activatedRoute</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cancelUrl"></a>
+                        <b>cancelUrl</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:28</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Caso o usuário queira cancelar a criação/edição do registro, ele será redirecionado para
+este enderçeo.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="createCallback"></a>
+                        <b>createCallback</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code> | undefined</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:32</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Qual função deverá ser chamada quando o usuário clicar no botão &quot;Criar registro&quot;</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="createPageTitle"></a>
+                        <b>createPageTitle</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:37</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Qual deve ser o título principal da página (H1) quando o usuário estiver criando
+um novo registro.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="formGroup"></a>
+                        <b>formGroup</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>FormGroup | undefined</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:44</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>O componente trabalha injetando elementos que possuem ligação com um formulário
+reativo (ReactiveForms), ou seja, precisam estar dentro de uma tag &quot;form&quot; que
+possua um atributo do formGroup que as contêm. Essa formgroup é fornecido por esse
+parâmetro.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="readFromIdCallback"></a>
+                        <b>readFromIdCallback</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code> | undefined</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:57</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Qual função deverá ser chamada quando o usuário clicar no botão &quot;Atualizar registro&quot;</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="saveUrl"></a>
+                        <b>saveUrl</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:61</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Para onde o usuário deverá ser redirecionado quando salvar/editar um registro.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="updateCallback"></a>
+                        <b>updateCallback</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code> | undefined</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:48</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Qual função deverá ser chamada quando o usuário clicar no botão &quot;Criar registro&quot;</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="updatePageTitle"></a>
+                        <b>updatePageTitle</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:53</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Qual deve ser o título principal da página (H1) quando o usuário estiver editando
+um novo registro.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="88"
+                            class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:88</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Após a inicialização do componente, verifica-se se o usuário esta tentando criar
+ou atualizar um registro através do parâmetro do rota &quot;id&quot;.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveChanges"></a>
+                    <span class="name">
+                        <span ><b>saveChanges</b></span>
+                        <a href="#saveChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveChanges()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="112"
+                            class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:112</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Chamada quando o usuário tenta criar ou atualizar um registro. Faz a verificação
+se não existe nenhum erro no formulário,caso não, continua o processo baseando-se
+nos callbacks &quot;createCallback&quot; e &quot;updateCallback&quot;.</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showErrorMessage"></a>
+                    <span class="name">
+                        <span ><b>showErrorMessage</b></span>
+                        <a href="#showErrorMessage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>showErrorMessage(errorMessage: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="133"
+                            class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:133</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Exibe uma mensagem de erro através do compomnente <a href="../components/ErrorMessageComponent.html">ErrorMessageComponent</a>.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>errorMessage</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Mensagem de erro a ser exibida.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_idParam"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_idParam</b></span>
+                        <a href="#_idParam"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:70</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Variável que armazena o valor do parâmetro &quot;id&quot;, presente na url.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_pageTitle"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_pageTitle</b></span>
+                        <a href="#_pageTitle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:75</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Após decidir se um novo registro será criado ou se será atualizado, baseando-se no valor
+do parâmetro &quot;id&quot;, o título de página escolhido será atribuído a essa variável.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="errorMessageComponent"></a>
+                    <span class="name">
+                        <span ><b>errorMessageComponent</b></span>
+                        <a href="#errorMessageComponent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../components/ErrorMessageComponent.html" target="_self" >ErrorMessageComponent | undefined</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(ErrorMessageComponent)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:66</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Referência ao componente &quot;ErrorMessage&quot;, que é usado para exibir mensagens de erro
+que não são específicas a um único campo do formulário.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pageTitle"></a>
+                        <span class="name"><b>pageTitle</b><a href="#pageTitle"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>pageTitle()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="81" class="link-to-prism">src/app/shared/default-form-page/default-form-page.component.ts:81</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnInit, ViewChild } from &#x27;@angular/core&#x27;;
+import { ErrorMessageComponent } from &#x27;../error-message/error-message.component&#x27;;
+import { FormGroup } from &#x27;@angular/forms&#x27;;
+import Result from &#x27;../helpers/result.type&#x27;;
+import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
+/**
+ * Utilizado para facilitar a criação de páginas de formulários (criação e edição de registros). Para utilizar
+ * esse componente, utilize elementos de formulário (input, select, textarea...) ou componentes que implementem
+ * a interface ControValueAcessor. Exemplo:
+ * &lt;app-default-form-page&gt;
+ *      &lt;input formControlName&#x3D;&quot;example&quot; /&gt;
+ *      &lt;select formControlName-&quot;example2&quot; &gt;&lt;option...&lt;/select&gt;
+ * &lt;/app-default-form-page&gt;
+ * 
+ * O componente faz uso de reactive forms, portanto, é importante que todos os elementos inseridos dentro de 
+ * &quot;app-default-form-page&quot; tenham o atributo &quot;formControlName&quot;
+ */
+@Component({
+    selector: &#x27;app-default-form-page&#x27;,
+    templateUrl: &#x27;./default-form-page.component.html&#x27;,
+    styleUrls: [&#x27;./default-form-page.component.css&#x27;]
+})
+export class DefaultFormPageComponent implements OnInit {
+    /**
+     * Caso o usuário queira cancelar a criação/edição do registro, ele será redirecionado para 
+     * este enderçeo.
+     */
+    @Input() cancelUrl: string &#x3D; &quot;&quot;;
+    /**
+     * Qual função deverá ser chamada quando o usuário clicar no botão &quot;Criar registro&quot;
+     */
+    @Input() createCallback: ((model: any) &#x3D;&gt; Result&lt;undefined, string&gt;) | undefined
+    /**
+     * Qual deve ser o título principal da página (H1) quando o usuário estiver criando
+     * um novo registro.
+     */
+    @Input() createPageTitle: string &#x3D; &quot;&quot;;
+    /**
+     * O componente trabalha injetando elementos que possuem ligação com um formulário 
+     * reativo (ReactiveForms), ou seja, precisam estar dentro de uma tag &quot;form&quot; que
+     * possua um atributo do formGroup que as contêm. Essa formgroup é fornecido por esse
+     * parâmetro.
+     */
+    @Input() formGroup: FormGroup | undefined;
+    /**
+     * Qual função deverá ser chamada quando o usuário clicar no botão &quot;Criar registro&quot;
+     */
+    @Input() updateCallback: ((model: any) &#x3D;&gt; Result&lt;undefined, string&gt;) | undefined
+    /**
+     * Qual deve ser o título principal da página (H1) quando o usuário estiver editando
+     * um novo registro.
+     */
+    @Input() updatePageTitle: string &#x3D; &quot;&quot;;
+    /**
+     * Qual função deverá ser chamada quando o usuário clicar no botão &quot;Atualizar registro&quot;
+     */
+    @Input() readFromIdCallback: ((id: any) &#x3D;&gt; any) | undefined
+    /**
+     * Para onde o usuário deverá ser redirecionado quando salvar/editar um registro.
+     */
+    @Input() saveUrl: string &#x3D; &quot;&quot;;
+    /**
+     * Referência ao componente &quot;ErrorMessage&quot;, que é usado para exibir mensagens de erro
+     * que não são específicas a um único campo do formulário.
+     */
+    @ViewChild(ErrorMessageComponent) errorMessageComponent: ErrorMessageComponent | undefined;
+    /**
+     * Variável que armazena o valor do parâmetro &quot;id&quot;, presente na url.
+     */
+    private _idParam: string;
+    /**
+     * Após decidir se um novo registro será criado ou se será atualizado, baseando-se no valor
+     * do parâmetro &quot;id&quot;, o título de página escolhido será atribuído a essa variável.
+     */
+    private _pageTitle: string &#x3D; &quot;&quot;;
+
+    constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+        this._idParam &#x3D; this.activatedRoute.snapshot.params[&#x27;id&#x27;] || &quot;&quot;;
+    }
+
+    get pageTitle(): string {
+        return this._pageTitle;
+    }
+    /**
+     * Após a inicialização do componente, verifica-se se o usuário esta tentando criar
+     * ou atualizar um registro através do parâmetro do rota &quot;id&quot;.
+     */
+    ngOnInit(): void {
+        this._pageTitle &#x3D; this.createPageTitle;
+        if(this._idParam !&#x3D;&#x3D; &quot;new&quot;) {
+            if(!this.updateCallback) {
+                this.router.navigateByUrl(this.cancelUrl);
+                return;
+            }
+
+            const numericIdParam &#x3D; parseInt(this._idParam)
+            const modelToUpdate &#x3D; this.readFromIdCallback!(
+                isNaN(numericIdParam) ? this._idParam : numericIdParam
+            );
+            if(!modelToUpdate) return;
+
+            this.formGroup!.setValue(modelToUpdate);
+            this._pageTitle &#x3D; this.updatePageTitle
+        }
+    }
+    /**
+     * Chamada quando o usuário tenta criar ou atualizar um registro. Faz a verificação
+     * se não existe nenhum erro no formulário,caso não, continua o processo baseando-se
+     * nos callbacks &quot;createCallback&quot; e &quot;updateCallback&quot;.
+     * @returns 
+     */
+    saveChanges() {
+        if(this.formGroup!.invalid) {
+            this.formGroup!.markAllAsTouched();
+            return;
+        }
+
+        const result &#x3D; this._idParam &#x3D;&#x3D;&#x3D; &quot;new&quot; ?
+            this.createCallback!(this.formGroup!.value) :
+            this.updateCallback!(this.formGroup!.value);
+             
+        if(!result.success) {
+            this.showErrorMessage(result.errorMessage);
+            return;
+        }
+
+        this.router.navigateByUrl(this.saveUrl);
+    }
+    /**
+     * Exibe uma mensagem de erro através do compomnente {@link ErrorMessageComponent}.
+     * @param errorMessage Mensagem de erro a ser exibida.
+     */
+    showErrorMessage(errorMessage: string) {
+        this.errorMessageComponent?.showMessage(errorMessage);
+    }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;app-default-page
+    [moduleTitle]&#x3D;&quot;this.pageTitle&quot;
+&gt;
+    &lt;form class&#x3D;&quot;crud-form&quot; [formGroup]&#x3D;&quot;this.formGroup&quot; *ngIf&#x3D;&quot;this.formGroup&quot; [noValidate]&gt;
+        &lt;app-error-message&gt;&lt;/app-error-message&gt;
+        &lt;ng-content&gt;&lt;/ng-content&gt;
+        &lt;div class&#x3D;&quot;button-row&quot;&gt;
+            &lt;button class&#x3D;&quot;secondary-button&quot; [routerLink]&#x3D;&quot;this.cancelUrl&quot;&gt;Cancelar&lt;/button&gt;
+            &lt;button class&#x3D;&quot;primary-button&quot; (click)&#x3D;&quot;this.saveChanges()&quot;&gt;Salvar&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/app-default-page&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./default-form-page.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">:host {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><app-default-page    [moduleTitle]="this.pageTitle">    <form class="crud-form" [formGroup]="this.formGroup" *ngIf="this.formGroup" [noValidate]>        <app-error-message></app-error-message>        <ng-content></ng-content>        <div class="button-row">            <button class="secondary-button" [routerLink]="this.cancelUrl">Cancelar</button>            <button class="primary-button" (click)="this.saveChanges()">Salvar</button>        </div>    </form></app-default-page></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BorderedInputComponent', 'selector': 'app-bordered-input'},{'name': 'CausesDataComponent', 'selector': 'app-causes-data'},{'name': 'CausesFormComponent', 'selector': 'app-causes-form'},{'name': 'ContentContainerComponent', 'selector': 'app-content-container'},{'name': 'ContentTopMenuComponent', 'selector': 'app-content-top-menu'},{'name': 'CrudTableComponent', 'selector': 'app-crud-table'},{'name': 'DashboardPageComponent', 'selector': 'app-dashboard-page'},{'name': 'DataTableComponent', 'selector': 'app-data-table'},{'name': 'DefaultDataPageComponent', 'selector': 'app-default-data-page'},{'name': 'DefaultFormPageComponent', 'selector': 'app-default-form-page'},{'name': 'DefaultPageComponent', 'selector': 'app-default-page'},{'name': 'DefectsDataComponent', 'selector': 'app-defects-data'},{'name': 'DefectsFormComponent', 'selector': 'app-defects-form'},{'name': 'DeleteModalComponent', 'selector': 'app-delete-modal'},{'name': 'DepartmentDataComponent', 'selector': 'app-department-data'},{'name': 'DepartmentFormComponent', 'selector': 'app-department-form'},{'name': 'EmployeesDataComponent', 'selector': 'app-employees-data'},{'name': 'EmployeesFormComponent', 'selector': 'app-employees-form'},{'name': 'EquipmentsDataComponent', 'selector': 'app-equipments-data'},{'name': 'EquipmentsFormComponent', 'selector': 'app-equipments-form'},{'name': 'ErrorMessageComponent', 'selector': 'app-error-message'},{'name': 'LoginPageComponent', 'selector': 'app-login-page'},{'name': 'LogoComponent', 'selector': 'app-logo'},{'name': 'LongAnswerFieldComponent', 'selector': 'app-long-answer-field'},{'name': 'MachineFamiliesDataComponent', 'selector': 'app-machine-families-data'},{'name': 'MachineFamiliesFormComponent', 'selector': 'app-machine-families-form'},{'name': 'MachinesDataComponent', 'selector': 'app-machines-data'},{'name': 'MachinesFormComponent', 'selector': 'app-machines-form'},{'name': 'RadioButtonAnswerFieldComponent', 'selector': 'app-radio-button-answer-field'},{'name': 'ResponsiveRowComponent', 'selector': 'app-responsive-row'},{'name': 'SectorDataComponent', 'selector': 'app-sector-data'},{'name': 'SectorFormComponent', 'selector': 'app-sector-form'},{'name': 'SelectAnswerFieldComponent', 'selector': 'app-select-answer-field'},{'name': 'ServiceOrderDataComponent', 'selector': 'app-service-order-data'},{'name': 'ServiceOrderFormComponent', 'selector': 'app-service-order-form'},{'name': 'ServiceSolicitationDataComponent', 'selector': 'app-service-solicitation-data'},{'name': 'ServiceSolicitationFormComponent', 'selector': 'app-service-solicitation-form'},{'name': 'ShortAnswerFieldComponent', 'selector': 'app-short-answer-field'},{'name': 'SideMenuComponent', 'selector': 'app-side-menu'},{'name': 'SideMenuItemComponent', 'selector': 'app-side-menu-item'},{'name': 'SolutionsDataComponent', 'selector': 'app-solutions-data'},{'name': 'SolutionsFormComponent', 'selector': 'app-solutions-form'},{'name': 'SsOsIndicatorComponent', 'selector': 'app-ss-os-indicator'},{'name': 'SummaryContainerComponent', 'selector': 'app-summary-container'},{'name': 'SymptomsDataComponent', 'selector': 'app-symptoms-data'},{'name': 'SymptomsFormComponent', 'selector': 'app-symptoms-form'},{'name': 'TagsDataComponent', 'selector': 'app-tags-data'},{'name': 'TagsFormComponent', 'selector': 'app-tags-form'},{'name': 'TopMenuComponent', 'selector': 'app-top-menu'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'DefaultFormPageComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'DefaultFormPageComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
